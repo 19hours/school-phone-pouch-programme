@@ -1,6 +1,3 @@
-'use client'
-
-import { useSearchParams } from 'next/navigation'
 import Breadcrumbs from '@/components/Breadcrumbs'
 import LeadForm from '@/components/LeadForm'
 import Link from 'next/link'
@@ -15,10 +12,15 @@ export const metadata = {
   }
 }
 
-export default function ContactPage() {
-  const params = useSearchParams()
-  const topic = params.get('topic')
-  const message = params.get('message')
+type ContactPageProps = {
+  searchParams: {
+    topic?: string
+    message?: string
+  }
+}
+
+export default function ContactPage({ searchParams }: ContactPageProps) {
+  const { topic, message } = searchParams
   const preset = topic || message ? `${topic ? `Topic: ${topic}\n` : ''}${message || ''}` : undefined
 
   return (

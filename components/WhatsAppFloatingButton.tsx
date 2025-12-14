@@ -20,12 +20,12 @@ export default function WhatsAppFloatingButton() {
     <Link
       href={href}
       aria-label="WhatsApp Us"
-      className="fixed bottom-6 right-6 bg-[#25D366] text-white rounded-full shadow-lg px-5 py-3 text-lg font-semibold hover:scale-105 transition transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1DA851] flex items-center gap-2"
+      className="fixed bottom-6 right-6 bg-[#25D366] text-white rounded-full shadow-lg px-5 py-3 text-lg font-semibold hover:scale-105 transition transform focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1DA851] flex items-center gap-3"
     >
       <svg
         aria-hidden="true"
         focusable="false"
-        className="w-5 h-5"
+        className="w-6 h-6"
         viewBox="0 0 32 32"
         fill="currentColor"
       >
