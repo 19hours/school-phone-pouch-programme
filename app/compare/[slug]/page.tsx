@@ -23,6 +23,15 @@ export default function ComparisonPage({ params }: { params: { slug: string } })
   const item = getComparisonBySlug(params.slug)
   if (!item) return <p>Not found</p>
 
+  const highlights: Record<string, string> = {
+    'pouch-vs-yondr':
+      'Our pouch uses a magnetic clip with no needle, keeping bags and hands safe while staying secure for assemblies and exams.',
+    'pouch-vs-phone-lockers':
+      'Because the pouch travels with the class, teachers avoid locker bottlenecks and can colour-code by level for quick checks.',
+    'lockable-pouch-vs-standard-bags':
+      'Serial numbers, name cards, and logo printing make accountability clear while staying lightweight for students.'
+  }
+
   const related = [
     { href: '/programme', label: 'Programme' },
     { href: '/customisation', label: 'Customisation' },
@@ -35,6 +44,7 @@ export default function ComparisonPage({ params }: { params: { slug: string } })
       <Breadcrumbs crumbs={[{ name: 'Home', href: '/' }, { name: 'Compare', href: '/compare' }, { name: item.title }]} />
       <h1 className="text-3xl font-bold">{item.title}</h1>
       <p className="text-xl">{item.description}</p>
+      {highlights[item.slug] && <p className="text-lg text-slate-700">{highlights[item.slug]}</p>}
       <ul className="list-disc pl-6 space-y-2 text-lg">
         {item.details.map(detail => <li key={detail}>{detail}</li>)}
       </ul>

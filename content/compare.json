@@ -9,5 +9,27 @@
       "Local supplier with fast replacements",
       "Comfortable sling and name card options"
     ]
+  },
+  {
+    "slug": "pouch-vs-phone-lockers",
+    "title": "Lockable pouches vs phone lockers",
+    "description": "How classroom-issued pouches reduce bottlenecks compared to corridor locker banks.",
+    "details": [
+      "Pouches travel with classes, so there is no crowding at shared lockers",
+      "Numbered tags and name cards make spot checks quick for form teachers",
+      "Lower installation cost than metal lockers; no drilling or electrical",
+      "Magnetic clip lock is child-safe and quick to release during emergencies"
+    ]
+  },
+  {
+    "slug": "pouch-vs-yondr",
+    "title": "School pouch programme vs Yondr-style sleeves",
+    "description": "Singapore-made magnetic clip pouches compared with Yondr needle-pin locks used in US venues.",
+    "details": [
+      "Our magnetic clip uses no needle to protect students and bags from punctures",
+      "Colour by level and school logo customisation for easy visual control",
+      "Local supplier with next-day replacements; no overseas lead time",
+      "Name card window and sling included for circulation during recess or ECAs"
+    ]
   }
 ]

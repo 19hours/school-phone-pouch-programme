@@ -33,11 +33,16 @@ export default function Header() {
             type="button"
             className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-brand-primary focus:outline-none focus:ring-2 focus:ring-brand-primary"
             aria-label="Toggle navigation"
+            aria-expanded={open}
             onClick={() => setOpen(prev => !prev)}
           >
-            <span className="sr-only">Open menu</span>
+            <span className="sr-only">{open ? 'Close menu' : 'Open menu'}</span>
             <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              {open ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              )}
             </svg>
           </button>
         </div>

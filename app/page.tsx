@@ -14,8 +14,8 @@ export const metadata = {
 }
 
 export default function HomePage() {
-  const guides = getAllGuides().slice(0, 2)
-  const resources = getAllResources().slice(0, 1)
+  const guides = getAllGuides().slice(0, 3)
+  const resources = getAllResources().slice(0, 2)
   return (
     <div className="space-y-12">
       <Breadcrumbs crumbs={[{ name: 'Home' }]} />
