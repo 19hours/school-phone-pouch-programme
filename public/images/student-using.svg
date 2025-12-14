@@ -1,0 +1,32 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Student using phone pouch</title>
+<desc id="desc">Illustration of a student placing a phone into the black lockable pouch while wearing a lanyard.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#F7FBFF" offset="0%"/>
+    <stop stop-color="#DDEBF6" offset="100%"/>
+  </linearGradient>
+  <linearGradient id="shirt" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#FFFFFF" offset="0%"/>
+    <stop stop-color="#EEF2F6" offset="100%"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-10%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="28" stdDeviation="38" flood-color="#8CA0B3" flood-opacity="0.4"/>
+  </filter>
+</defs>
+<rect width="1200" height="1600" rx="40" fill="url(#sky)"/>
+<ellipse cx="600" cy="1250" rx="430" ry="160" fill="#C8D5E5"/>
+<g filter="url(#shadow)">
+  <path d="M620 460C620 390 565 335 495 335H470C400 335 345 390 345 460V880C345 960 400 1020 470 1020H495C565 1020 620 960 620 880V460Z" fill="url(#shirt)"/>
+  <path d="M555 360C555 320 522 288 482 288H458C418 288 385 320 385 360V470C385 510 418 542 458 542H482C522 542 555 510 555 470V360Z" fill="#F1C49D"/>
+  <circle cx="470" cy="260" r="82" fill="#F5D2A9"/>
+  <rect x="402" y="210" width="136" height="40" rx="18" fill="#0D1320"/>
+  <path d="M470 178C420 178 382 208 382 248C382 322 422 356 470 356C520 356 558 320 558 252C558 212 520 178 470 178Z" fill="#1B2538"/>
+  <rect x="448" y="360" width="44" height="360" rx="22" fill="#0F172A"/>
+  <rect x="470" y="640" width="220" height="320" rx="70" fill="#0E1118" stroke="#2F2F35" stroke-width="16"/>
+  <rect x="500" y="520" width="140" height="200" rx="26" fill="#E8E9ED" stroke="#D3D4D8" stroke-width="10"/>
+  <rect x="518" y="540" width="104" height="160" rx="18" fill="#F7F7FB"/>
+  <rect x="548" y="840" width="84" height="120" rx="22" fill="#111117" stroke="#2F2F35" stroke-width="10"/>
+  <circle cx="590" cy="900" r="36" fill="#1F1F23"/>
+</g>
+</svg>

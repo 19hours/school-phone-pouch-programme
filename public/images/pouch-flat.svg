@@ -1,0 +1,17 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Lockable phone pouch</title>
+<desc id="desc">Illustration of the black lockable phone pouch used in the school programme.</desc>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#1B1B1F" offset="0%"/>
+    <stop stop-color="#0E0E12" offset="100%"/>
+  </linearGradient>
+  <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="20" stdDeviation="30" flood-color="#0B0B0F" flood-opacity="0.35"/>
+  </filter>
+</defs>
+<rect x="140" y="80" width="520" height="1020" rx="70" fill="url(#g)" stroke="#2F2F35" stroke-width="14" filter="url(#shadow)"/>
+<path d="M400 80L620 260H180L400 80Z" fill="#16161B" stroke="#2F2F35" stroke-width="14"/>
+<rect x="340" y="520" width="120" height="140" rx="26" fill="#111117" stroke="#2F2F35" stroke-width="10"/>
+<circle cx="400" cy="590" r="42" fill="#1F1F23"/>
+</svg>
