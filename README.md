@@ -1,6 +1,6 @@
-# Chu School Phone Pouch Programme
+# School Phone Pouch Programme
 
-Next.js (App Router) site for Chu Technologies Pte Ltd. Includes MDX-driven guides/resources, comparison and FAQ hubs, and SEO-ready metadata.
+Next.js (App Router) site for a Singapore school phone pouch programme by Chu Technologies Pte Ltd. Includes MDX-driven guides/resources, comparison and FAQ hubs, and SEO-ready metadata.
 
 ## Getting started
 

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllGuides, getAllResources, getAllNews, getAllComparisons, getAllFaqs } from '@/lib/content'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://chu-tech.sg'
+  const baseUrl = 'https://schoolphonepouch.sg'
   const staticRoutes = ['', '/programme', '/customisation', '/pricing', '/about', '/contact', '/compare', '/guides', '/resources', '/faq']
   const dynamicRoutes = [
     ...getAllGuides().map(item => `/guides/${item.slug}`),

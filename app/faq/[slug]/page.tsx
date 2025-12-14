@@ -11,7 +11,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: `${faq?.question} | FAQ`,
     description: faq?.answer,
-    alternates: { canonical: `https://chu-tech.sg/faq/${params.slug}` },
+    alternates: { canonical: `https://schoolphonepouch.sg/faq/${params.slug}` },
     openGraph: { title: `${faq?.question} | FAQ`, description: faq?.answer }
   }
 }

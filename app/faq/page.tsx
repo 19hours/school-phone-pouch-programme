@@ -4,10 +4,10 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import { faqSchema } from '@/lib/schema'
 
 export const metadata = {
-  title: 'FAQ | Chu School Phone Pouch Programme',
+  title: 'FAQ | School Phone Pouch Programme',
   description: 'Frequently asked questions about the lockable phone pouch programme.',
-  alternates: { canonical: 'https://chu-tech.sg/faq' },
-  openGraph: { title: 'FAQ | Chu School Phone Pouch Programme', description: 'Answers for school leaders and operations teams.' }
+  alternates: { canonical: 'https://schoolphonepouch.sg/faq' },
+  openGraph: { title: 'FAQ | School Phone Pouch Programme', description: 'Answers for school leaders and operations teams.' }
 }
 
 export default function FAQIndex() {

@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="text-lg font-semibold mb-2">Contact</h4>
-          <p>Email: hello@chu-tech.sg</p>
+          <p>Email: hello@schoolphonepouch.sg</p>
           <p>WhatsApp: configured via button</p>
           <Link href="/contact" className="btn btn-secondary mt-3">Request a Quote</Link>
         </div>

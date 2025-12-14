@@ -12,7 +12,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: `${guide.title} | Guide`,
     description: guide.description,
-    alternates: { canonical: `https://chu-tech.sg/guides/${params.slug}` },
+    alternates: { canonical: `https://schoolphonepouch.sg/guides/${params.slug}` },
     openGraph: {
       title: `${guide.title} | Guide`,
       description: guide.description
@@ -25,7 +25,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
   const jsonLd = articleSchema({
     title: guide.title,
     description: guide.description,
-    url: `https://chu-tech.sg/guides/${guide.slug}`,
+    url: `https://schoolphonepouch.sg/guides/${guide.slug}`,
     date: guide.date
   })
   return (

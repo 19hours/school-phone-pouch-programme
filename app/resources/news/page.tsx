@@ -3,9 +3,9 @@ import { getAllNews } from '@/lib/content'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata = {
-  title: 'News | Chu School Phone Pouch Programme',
+  title: 'News | School Phone Pouch Programme',
   description: 'Updates from Chu Technologies on local manufacturing and deployments.',
-  alternates: { canonical: 'https://chu-tech.sg/resources/news' }
+  alternates: { canonical: 'https://schoolphonepouch.sg/resources/news' }
 }
 
 export default function NewsIndex() {

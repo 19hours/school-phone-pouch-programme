@@ -3,11 +3,11 @@ import { getAllGuides } from '@/lib/content'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata = {
-  title: 'Guides | Chu School Phone Pouch Programme',
+  title: 'Guides | School Phone Pouch Programme',
   description: 'Long-form guides on implementing school phone pouch programmes in Singapore.',
-  alternates: { canonical: 'https://chu-tech.sg/guides' },
+  alternates: { canonical: 'https://schoolphonepouch.sg/guides' },
   openGraph: {
-    title: 'Guides | Chu School Phone Pouch Programme',
+    title: 'Guides | School Phone Pouch Programme',
     description: 'Implementation and operations guides for school teams.'
   }
 }

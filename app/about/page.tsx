@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata = {
   title: 'About | Chu Technologies Pte Ltd',
   description: 'Local Singapore supplier manufacturing lockable phone pouches with UEN 201926755K and government vendor status.',
-  alternates: { canonical: 'https://chu-tech.sg/about' },
+  alternates: { canonical: 'https://schoolphonepouch.sg/about' },
   openGraph: {
     title: 'About | Chu Technologies Pte Ltd',
     description: 'Registered government vendor manufacturing school phone pouches locally.'

@@ -2,11 +2,11 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Programme | Chu School Phone Pouch Programme',
+  title: 'Programme | School Phone Pouch Programme',
   description: 'Operational details, workflow, and procurement-friendly process for the Chu phone pouch programme.',
-  alternates: { canonical: 'https://chu-tech.sg/programme' },
+  alternates: { canonical: 'https://schoolphonepouch.sg/programme' },
   openGraph: {
-    title: 'Programme | Chu School Phone Pouch Programme',
+    title: 'Programme | School Phone Pouch Programme',
     description: 'Workflow and procurement details for the Singapore-made phone pouch programme.'
   }
 }

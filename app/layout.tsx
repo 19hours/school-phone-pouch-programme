@@ -6,14 +6,14 @@ import Footer from '@/components/Footer'
 import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton'
 
 export const metadata: Metadata = {
-  title: 'Chu School Phone Pouch Programme',
+  title: 'School Phone Pouch Programme',
   description: 'Singapore-made lockable phone pouch programme for schools with customisation and rapid local support.',
-  alternates: { canonical: 'https://chu-tech.sg' },
+  alternates: { canonical: 'https://schoolphonepouch.sg' },
   openGraph: {
-    title: 'Chu School Phone Pouch Programme',
+    title: 'School Phone Pouch Programme',
     description: 'Operationally proven, MOE-aligned phone pouch workflow with custom branding and local supplier.',
-    url: 'https://chu-tech.sg',
-    siteName: 'Chu Technologies'
+    url: 'https://schoolphonepouch.sg',
+    siteName: 'School Phone Pouch Programme'
   }
 }
 

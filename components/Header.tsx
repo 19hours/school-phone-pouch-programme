@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-40">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="text-2xl font-bold text-brand-primary">Chu School Phone Pouch</Link>
+        <Link href="/" className="text-2xl font-bold text-brand-primary">School Phone Pouch</Link>
         <nav className="flex items-center gap-4 text-lg">
           {links.map(link => (
             <Link

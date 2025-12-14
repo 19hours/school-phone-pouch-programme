@@ -2,11 +2,11 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Pricing | Chu School Phone Pouch Programme',
+  title: 'Pricing | School Phone Pouch Programme',
   description: 'Transparent, quote-based pricing with factors that impact your phone pouch programme cost.',
-  alternates: { canonical: 'https://chu-tech.sg/pricing' },
+  alternates: { canonical: 'https://schoolphonepouch.sg/pricing' },
   openGraph: {
-    title: 'Pricing | Chu School Phone Pouch Programme',
+    title: 'Pricing | School Phone Pouch Programme',
     description: 'Request a quote based on cohort size, customisation, and replacement schedules.'
   }
 }

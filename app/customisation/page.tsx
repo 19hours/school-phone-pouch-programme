@@ -2,11 +2,11 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Customisation | Chu School Phone Pouch Programme',
+  title: 'Customisation | School Phone Pouch Programme',
   description: 'Colour, name card, sling, and logo options for your school phone pouch programme.',
-  alternates: { canonical: 'https://chu-tech.sg/customisation' },
+  alternates: { canonical: 'https://schoolphonepouch.sg/customisation' },
   openGraph: {
-    title: 'Customisation | Chu School Phone Pouch Programme',
+    title: 'Customisation | School Phone Pouch Programme',
     description: 'Custom colours, logo prints, name card windows, and sling configurations for the Chu pouch.'
   }
 }
@@ -37,7 +37,7 @@ export default function CustomisationPage() {
       </div>
       <div className="flex gap-4">
         <Link href="/contact?topic=customisation&message=I%20want%20custom%20pouch%20branding" className="btn btn-primary">Request a Quote</Link>
-        <Link href="/compare/chu-vs-standard-bags" className="btn btn-secondary">Compare options</Link>
+        <Link href="/compare/lockable-pouch-vs-standard-bags" className="btn btn-secondary">Compare options</Link>
       </div>
     </div>
   )

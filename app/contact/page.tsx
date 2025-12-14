@@ -5,11 +5,11 @@ import Breadcrumbs from '@/components/Breadcrumbs'
 import LeadForm from '@/components/LeadForm'
 
 export const metadata = {
-  title: 'Contact | Chu School Phone Pouch Programme',
+  title: 'Contact | School Phone Pouch Programme',
   description: 'Reach the Chu Technologies team for quotes, pilots, and procurement documents.',
-  alternates: { canonical: 'https://chu-tech.sg/contact' },
+  alternates: { canonical: 'https://schoolphonepouch.sg/contact' },
   openGraph: {
-    title: 'Contact | Chu School Phone Pouch Programme',
+    title: 'Contact | School Phone Pouch Programme',
     description: 'Request a quote or arrange a consultation with the Singapore supplier.'
   }
 }

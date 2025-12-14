@@ -11,7 +11,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: `${item?.title} | Comparison`,
     description: item?.description,
-    alternates: { canonical: `https://chu-tech.sg/compare/${params.slug}` },
+    alternates: { canonical: `https://schoolphonepouch.sg/compare/${params.slug}` },
     openGraph: {
       title: `${item?.title} | Comparison`,
       description: item?.description

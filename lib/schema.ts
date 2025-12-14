@@ -3,7 +3,7 @@ export function organizationSchema() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Chu Technologies Pte Ltd',
-    url: 'https://chu-tech.sg',
+    url: 'https://schoolphonepouch.sg',
     identifier: 'UEN 201926755K',
     sameAs: ['https://www.linkedin.com'],
     address: {

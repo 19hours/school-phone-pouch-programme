@@ -50,7 +50,7 @@ export default function LeadForm({ presetMessage }: { presetMessage?: string }) 
         setError('There was an issue sending your request. Please try again or use WhatsApp.')
       }
     } else {
-      const mailto = `mailto:hello@chu-tech.sg?subject=School phone pouch enquiry&body=${encodeURIComponent(`Name: ${formData.name}\nRole: ${formData.role}\nSchool: ${formData.school}\nEmail: ${formData.email}\nMessage: ${formData.message}`)}`
+      const mailto = `mailto:hello@schoolphonepouch.sg?subject=School phone pouch enquiry&body=${encodeURIComponent(`Name: ${formData.name}\nRole: ${formData.role}\nSchool: ${formData.school}\nEmail: ${formData.email}\nMessage: ${formData.message}`)}`
       window.location.href = mailto
       setFormState('success')
     }

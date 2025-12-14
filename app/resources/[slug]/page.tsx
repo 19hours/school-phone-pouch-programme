@@ -12,14 +12,14 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: `${res.title} | Resource`,
     description: res.description,
-    alternates: { canonical: `https://chu-tech.sg/resources/${params.slug}` },
+    alternates: { canonical: `https://schoolphonepouch.sg/resources/${params.slug}` },
     openGraph: { title: `${res.title} | Resource`, description: res.description }
   }
 }
 
 export default function ResourcePage({ params }: { params: { slug: string } }) {
   const res = getResourceBySlug(params.slug)
-  const jsonLd = articleSchema({ title: res.title, description: res.description, url: `https://chu-tech.sg/resources/${res.slug}`, date: res.date })
+  const jsonLd = articleSchema({ title: res.title, description: res.description, url: `https://schoolphonepouch.sg/resources/${res.slug}`, date: res.date })
   return (
     <div className="space-y-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

@@ -3,11 +3,11 @@ import { getAllComparisons } from '@/lib/content'
 import Breadcrumbs from '@/components/Breadcrumbs'
 
 export const metadata = {
-  title: 'Compare options | Chu School Phone Pouch Programme',
+  title: 'Compare options | School Phone Pouch Programme',
   description: 'See how the Chu pouch compares to other storage methods for school phone policies.',
-  alternates: { canonical: 'https://chu-tech.sg/compare' },
+  alternates: { canonical: 'https://schoolphonepouch.sg/compare' },
   openGraph: {
-    title: 'Compare options | Chu School Phone Pouch Programme',
+    title: 'Compare options | School Phone Pouch Programme',
     description: 'Comparison hub for phone pouch approaches.'
   }
 }
