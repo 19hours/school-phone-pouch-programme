@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const source = path.join(__dirname, '..', 'node_modules', 'govuk-frontend', 'govuk', 'assets');
+const source = path.join(__dirname, '..', 'node_modules', 'govuk-frontend', 'dist', 'govuk', 'assets');
 const destination = path.join(__dirname, '..', 'public', 'govuk', 'assets');
 
 function copyFolder(src, dest) {
