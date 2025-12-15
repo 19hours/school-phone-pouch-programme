@@ -23,8 +23,8 @@ export default function Header() {
   }, [pathname])
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-40">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4 flex-wrap">
+    <header className="bg-white shadow-sm sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3 min-h-[64px] flex items-center justify-between gap-4 flex-wrap">
         <div className="flex items-center justify-between w-full md:w-auto">
           <Link href="/" className="text-2xl font-bold text-brand-primary whitespace-nowrap">
             School Phone Pouch
