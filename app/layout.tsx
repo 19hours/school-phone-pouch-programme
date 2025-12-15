@@ -22,10 +22,16 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased bg-slate-50 text-slate-900">
+        <a
+          href="#main-content"
+          className="focus-ring absolute left-4 top-4 z-50 inline-flex -translate-y-16 items-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-lg focus:translate-y-0"
+        >
+          Skip to main content
+        </a>
         <Header />
         <TrustBadge />
-        <main>{children}</main>
+        <main id="main-content" className="min-h-screen pb-12">{children}</main>
         <Footer />
         <WhatsAppButton />
         <Script
