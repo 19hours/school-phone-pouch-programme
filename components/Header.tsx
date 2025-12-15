@@ -17,8 +17,16 @@ export default function Header() {
   return (
     <header>
       <div className="navbar">
-        <div style={{ fontWeight: 800, letterSpacing: '-0.01em' }}>
-          <Link href="/">SG School Phone Pouch Programme</Link>
+        <div className="brand">
+          <span className="gov-mark">GOV.UK</span>
+          <div>
+            <div>
+              <Link href="/" style={{ color: '#ffffff', textDecoration: 'none' }}>
+                SG School Phone Pouch Programme
+              </Link>
+            </div>
+            <small style={{ color: '#dfe0e2' }}>Official information for schools</small>
+          </div>
         </div>
         <nav className="nav-links" aria-label="Primary">
           {navLinks.map((link) => (
