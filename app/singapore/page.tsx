@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Singapore phone policy hub | School Phone Pouch Programme',
-  description: 'Localised guidance for Singapore schools implementing phone-free workflows.',
+  description: 'Guidance for Singapore schools implementing phone-free workflows.',
   alternates: { canonical: 'https://schoolphonepouch.sg/singapore' },
   openGraph: {
     title: 'Singapore phone policy hub',
-    description: 'Localised workflows, policy considerations, and MOE-aligned resources.'
+    description: 'Workflows, policy considerations, and MOE-aligned resources.'
   }
 }
 
