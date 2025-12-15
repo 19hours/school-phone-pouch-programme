@@ -1,0 +1,327 @@
+:root {
+  --govuk-blue: #1d70b8;
+  --govuk-dark: #0b0c0c;
+  --govuk-light: #f3f2f1;
+  --govuk-yellow: #ffdd00;
+  --whatsapp-green: #128c7e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "GDS Transport", Arial, sans-serif;
+  color: var(--govuk-dark);
+  background: white;
+}
+
+a {
+  color: var(--govuk-blue);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: var(--govuk-yellow);
+  color: var(--govuk-dark);
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.site-header {
+  background: white;
+  border-bottom: 1px solid #dcdcdc;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.trust-badge {
+  background: var(--govuk-light);
+  border-left: 4px solid var(--govuk-blue);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 2px solid var(--govuk-blue);
+  padding: 0.35rem 0.6rem;
+  color: var(--govuk-blue);
+  font-weight: 600;
+}
+
+.nav-wrapper {
+  border-top: 1px solid #dcdcdc;
+  padding: 0.5rem 0;
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.primary-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-nav a {
+  padding: 0.35rem 0.4rem;
+  border-radius: 3px;
+}
+
+.primary-nav a.active,
+.primary-nav a:focus-visible {
+  background: var(--govuk-light);
+}
+
+.header-ctas {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  background: var(--govuk-blue);
+  color: white;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.button.secondary {
+  background: var(--govuk-light);
+  color: var(--govuk-blue);
+  border: 1px solid var(--govuk-blue);
+}
+
+.hero {
+  background: var(--govuk-light);
+  padding: 3rem 0;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.two-col {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.section {
+  padding: 2.5rem 0;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.list-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.list-inline li {
+  background: var(--govuk-light);
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+}
+
+.faq {
+  border-top: 1px solid #dcdcdc;
+  padding-top: 1rem;
+}
+
+.faq details {
+  margin-bottom: 0.75rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  padding: 0.75rem;
+  background: white;
+}
+
+.footer {
+  background: #0b0c0c;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer a {
+  color: white;
+}
+
+.footer .footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer small {
+  color: #dcdcdc;
+}
+
+.whatsapp-fab {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 60;
+}
+
+.whatsapp-fab a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--whatsapp-green);
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #dcdcdc;
+  padding: 0.65rem;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--govuk-yellow);
+  color: #0b0c0c;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+blockquote {
+  border-left: 4px solid var(--govuk-blue);
+  padding-left: 0.75rem;
+  color: #3b3b3b;
+}
+
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .nav-wrapper {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-wrapper.open {
+    display: block;
+  }
+
+  .primary-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .primary-nav ul {
+    flex-direction: column;
+  }
+
+  .header-ctas {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 0;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.small {
+  font-size: 0.95rem;
+  color: #3b3b3b;
+}
