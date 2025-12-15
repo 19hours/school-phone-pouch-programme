@@ -25,7 +25,7 @@ export default function WhatsAppFloatingButton() {
       <svg
         aria-hidden="true"
         focusable="false"
-        className="w-6 h-6"
+        className="w-7 h-7"
         viewBox="0 0 32 32"
         fill="currentColor"
       >

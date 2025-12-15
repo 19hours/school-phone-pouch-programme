@@ -17,23 +17,36 @@ export default function HomePage() {
   const guides = getAllGuides().slice(0, 3)
   const resources = getAllResources().slice(0, 2)
   return (
-    <div className="space-y-12">
+    <div className="space-y-10">
       <Breadcrumbs crumbs={[{ name: 'Home' }]} />
-      <section className="grid lg:grid-cols-2 gap-10 items-center">
+      <section className="grid lg:grid-cols-2 gap-10 lg:items-start">
         <div className="space-y-6">
+          <div className="rounded-2xl bg-slate-50 border border-slate-200 p-4 text-base sm:text-lg flex flex-col gap-2" aria-label="Credentials">
+            <div className="flex items-start gap-3">
+              <span aria-hidden className="text-2xl">🏛️</span>
+              <p className="font-semibold">Registered local government vendor • UEN <span className="whitespace-nowrap">201926755K</span></p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span aria-hidden className="text-2xl">🏭</span>
+              <p>Singapore-based manufacturing and next-day replacements.</p>
+            </div>
+          </div>
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">School Phone Pouch Programme</h1>
           <p className="text-xl">Lockable, numbered pouches with local Singapore manufacturing, customisation, and an MOE-aligned workflow.</p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <Link href="/contact" className="btn btn-primary w-full sm:w-auto text-center">Request a Quote</Link>
             <Link href="/programme" className="btn btn-secondary w-full sm:w-auto text-center">See Programme</Link>
           </div>
-          <ul className="list-disc pl-5 text-lg space-y-2">
-            <li>Registered government vendor (UEN 201926755K)</li>
-            <li>Custom colours, school logo, name card, and sling options</li>
-            <li>Local supplier with in-house manufacturing</li>
-          </ul>
+          <div className="grid sm:grid-cols-2 gap-3">
+            {[{ label: 'Custom colours by level', icon: '🎨' }, { label: 'School logo + name card window', icon: '🪪' }, { label: 'Child-safe magnetic clip lock', icon: '🧲' }, { label: 'Comfortable sling for circulation', icon: '🎒' }].map(feature => (
+              <div key={feature.label} className="bg-white rounded-xl shadow p-4 flex gap-3 items-start">
+                <span aria-hidden className="text-2xl">{feature.icon}</span>
+                <p className="text-lg">{feature.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 items-center">
+        <div className="grid grid-cols-2 gap-4 items-start">
           <div className="bg-white shadow rounded-2xl p-3">
             <Image
               src="/images/pouch-flat.svg"
