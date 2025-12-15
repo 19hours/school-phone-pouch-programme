@@ -40,15 +40,20 @@ const steps = [
 export default function HowItWorksPage() {
   return (
     <div className="space-y-12 pb-16">
-      <section className="section space-y-4">
-        <h1 className="heading">How it works</h1>
-        <p className="subheading">A simple routine that creates fast, visible compliance checks for teachers and administrators.</p>
+      <section className="section">
+        <div className="surface-panel space-y-4">
+          <h1 className="heading">How it works</h1>
+          <p className="subheading">A simple routine that creates fast, visible compliance checks for teachers and administrators.</p>
+        </div>
       </section>
 
       <section className="section grid gap-6 md:grid-cols-3">
         {steps.map((step) => (
-          <div key={step.title} className="card space-y-4">
-            <div className="text-sm font-semibold uppercase tracking-wide text-primary">{step.title}</div>
+          <div key={step.title} className="card space-y-4 shadow-2xl shadow-blue-100">
+            <div className="flex items-start justify-between gap-3">
+              <div className="text-sm font-semibold uppercase tracking-wide text-primary">{step.title}</div>
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-blue-50 text-sm font-semibold text-primary">{step.title.slice(5, 6)}</span>
+            </div>
             <p className="text-slate-800">{step.body}</p>
             <ul className="space-y-2 text-slate-700">
               {step.bullets.map((bullet) => (
@@ -59,9 +64,9 @@ export default function HowItWorksPage() {
         ))}
       </section>
 
-      <section className="section rounded-xl bg-slate-900 px-6 py-10 text-white">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
+      <section className="section">
+        <div className="surface-panel flex flex-col gap-4 rounded-3xl bg-gradient-to-r from-slate-900 to-blue-800 px-8 py-10 text-white shadow-2xl shadow-blue-200 md:flex-row md:items-center md:justify-between">
+          <div className="space-y-2">
             <p className="text-xl font-semibold">Book a demo</p>
             <p className="text-sm text-slate-100">Explore the steps in person and plan your rollout.</p>
           </div>

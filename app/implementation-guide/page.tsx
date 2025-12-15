@@ -46,14 +46,16 @@ const steps = [
 export default function ImplementationGuidePage() {
   return (
     <div className="space-y-12 pb-16">
-      <section className="section space-y-4">
-        <h1 className="heading">Implementation guide</h1>
-        <p className="subheading">Simple rollout: issue pouches, brief staff and students.</p>
+      <section className="section">
+        <div className="surface-panel space-y-4">
+          <h1 className="heading">Implementation guide</h1>
+          <p className="subheading">Simple rollout: issue pouches, brief staff and students.</p>
+        </div>
       </section>
 
       <section className="section space-y-6">
         {steps.map((step) => (
-          <div key={step.title} className="card space-y-3">
+          <div key={step.title} className="card space-y-3 shadow-2xl shadow-blue-100">
             <h2 className="text-xl font-semibold text-slate-900">{step.title}</h2>
             <p className="text-slate-800">{step.intro}</p>
             <ul className="space-y-2 text-slate-700">
@@ -65,8 +67,8 @@ export default function ImplementationGuidePage() {
         ))}
       </section>
 
-      <section className="section rounded-xl bg-slate-900 px-6 py-10 text-white">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <section className="section">
+        <div className="surface-panel flex flex-col gap-4 rounded-3xl bg-gradient-to-r from-slate-900 to-blue-800 px-8 py-10 text-white shadow-2xl shadow-blue-200 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-xl font-semibold">Book a demo</p>
             <p className="text-sm text-slate-100">Walk through the rollout steps with your leadership team.</p>

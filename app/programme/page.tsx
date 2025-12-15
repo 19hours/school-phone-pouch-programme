@@ -57,44 +57,48 @@ const comparisonRows = [
 export default function ProgrammePage() {
   return (
     <div className="space-y-12 pb-16">
-      <section className="section space-y-4">
-        <h1 className="heading">What is the School Phone Pouch Programme</h1>
-        <p className="subheading">A consistent solution for visible compliance and student reassurance.</p>
+      <section className="section">
+        <div className="surface-panel space-y-4">
+          <h1 className="heading">What is the School Phone Pouch Programme</h1>
+          <p className="subheading">A consistent solution for visible compliance and student reassurance.</p>
+        </div>
       </section>
 
       <section className="section space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">Problem</h2>
-        <ul className="grid gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           {["Students are often distracted by smartphones.", 'Schools and exam centres need simple, visible compliance.', 'Bags and pockets still allow discreet phone use.', 'Administrators need a consistent, easy-to-audit solution.'].map((item) => (
-            <li key={item} className="card text-slate-800">
+            <div key={item} className="card text-slate-800 shadow-2xl shadow-blue-100">
               {item}
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section className="section space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">Solution</h2>
-        <div className="card space-y-3 text-slate-800">
-          <p>Each student places their phone into a personal phone pouch as they enter a phone-free space.</p>
-          <p>
-            The pouch uses a safe clip mechanism, and can be unlocked using a magnetic base when students are allowed to use their phones again.
-          </p>
-          <p>Pouch stays with the student entire day, easy to show the phone is secured.</p>
-          <p>Can be unlocked by admin staff during emergencies.</p>
-          <p>Enables fast, visual compliance checks for teachers and administrators.</p>
-          <div className="grid gap-2 md:grid-cols-2">
-            <div className="card bg-slate-50 text-slate-800">
+        <div className="surface-panel space-y-4">
+          <div className="space-y-3 text-slate-800">
+            <p>Each student places their phone into a personal phone pouch as they enter a phone-free space.</p>
+            <p>
+              The pouch uses a safe clip mechanism, and can be unlocked using a magnetic base when students are allowed to use their phones again.
+            </p>
+            <p>Pouch stays with the student entire day, easy to show the phone is secured.</p>
+            <p>Can be unlocked by admin staff during emergencies.</p>
+            <p>Enables fast, visual compliance checks for teachers and administrators.</p>
+          </div>
+          <div className="grid gap-3 md:grid-cols-2">
+            <div className="card bg-gradient-to-br from-slate-900 to-blue-800 text-slate-100">
               Lock that can only be unlocked using an unlocking base.
             </div>
-            <div className="card bg-slate-50 text-slate-800">Compatible with all phone models.</div>
+            <div className="card bg-white/90 text-slate-800">Compatible with all phone models.</div>
           </div>
         </div>
       </section>
 
       <section className="section space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">Already rolled out in schools around the US</h2>
-        <div className="card space-y-2 text-slate-800">
+        <div className="surface-panel space-y-2 text-slate-800">
           <p>This solution to prevent classroom phone usage is very popular in the US.</p>
           <p>The lock they use has a needle in the mechanism!</p>
           <p>Our lockable phone pouches do not use needles.</p>
@@ -106,41 +110,43 @@ export default function ProgrammePage() {
       <section className="section space-y-4">
         <h2 className="text-2xl font-semibold text-slate-900">School Phone Pouch Programme vs Phone Lockers</h2>
         <div className="overflow-x-auto">
-          <table className="table">
-            <thead>
-              <tr>
-                <th>Area</th>
-                <th>School Phone Pouch Programme</th>
-                <th>Phone lockers</th>
-              </tr>
-            </thead>
-            <tbody>
-              {comparisonRows.map((row) => (
-                <tr key={row.title}>
-                  <td className="font-semibold text-slate-900">{row.title}</td>
-                  <td>
-                    <ul className="space-y-2 text-slate-800">
-                      {row.programme.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-                  </td>
-                  <td>
-                    <ul className="space-y-2 text-slate-800">
-                      {row.lockers.map((point) => (
-                        <li key={point}>{point}</li>
-                      ))}
-                    </ul>
-                  </td>
+          <div className="surface-panel p-0">
+            <table className="table">
+              <thead>
+                <tr>
+                  <th>Area</th>
+                  <th>School Phone Pouch Programme</th>
+                  <th>Phone lockers</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row) => (
+                  <tr key={row.title}>
+                    <td className="font-semibold text-slate-900">{row.title}</td>
+                    <td>
+                      <ul className="space-y-2 text-slate-800">
+                        {row.programme.map((point) => (
+                          <li key={point}>{point}</li>
+                        ))}
+                      </ul>
+                    </td>
+                    <td>
+                      <ul className="space-y-2 text-slate-800">
+                        {row.lockers.map((point) => (
+                          <li key={point}>{point}</li>
+                        ))}
+                      </ul>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
 
-      <section className="section rounded-xl bg-primary px-6 py-10 text-white">
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <section className="section">
+        <div className="surface-panel flex flex-col gap-4 rounded-3xl bg-gradient-to-r from-primary to-secondary px-8 py-10 text-white shadow-2xl shadow-blue-200 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-2xl font-semibold">Please contact us immediately to roll out in 2026!</p>
           </div>
