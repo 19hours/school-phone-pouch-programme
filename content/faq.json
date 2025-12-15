@@ -1,12 +1,26 @@
 [
-  {
-    "slug": "locking-mechanism",
-    "question": "How secure is the locking mechanism?",
-    "answer": "Each pouch uses a unique steel pin and numbered seal that shows tampering instantly. Spare seals are provided for quick replacement."
-  },
-  {
-    "slug": "cleaning",
-    "question": "Can the pouches be cleaned easily?",
-    "answer": "Yes. The material is water-resistant and can be wiped down. Replacement liners are available for heavy-use classrooms."
-  }
+  {"slug": "is-the-phone-safe", "question": "Is the phone safe in the pouch?", "answer": "Yes. The pouch is padded, water-resistant, and sealed with a magnetic clip plus numbered seal to deter tampering."},
+  {"slug": "does-it-fit-all-phones", "question": "Does it fit all phones?", "answer": "Fits common smartphones including large-screen devices; we offer oversized options for bulky cases."},
+  {"slug": "can-students-damage-the-pouch", "question": "Can students damage the pouch?", "answer": "The stitching and fabric are reinforced. Damage is tamper-evident, and replacements are stocked locally."},
+  {"slug": "what-if-pouch-is-damaged", "question": "What if a pouch is damaged?", "answer": "Swap to a spare pouch and notify us; we deliver replacements next-day in Singapore."},
+  {"slug": "how-do-you-unlock-the-pouch", "question": "How do you unlock the pouch?", "answer": "A magnetic clip releases with a simple twist—no sharp pins—so teachers can open safely even during emergencies."},
+  {"slug": "how-many-unlock-points-do-we-need", "question": "How many unlock points do we need?", "answer": "Most schools set 2–4 unlock points at exits or hallways; assemblies can add mobile unlock kits for speed."},
+  {"slug": "how-fast-is-entry-process", "question": "How fast is entry process?", "answer": "Classes queue by row; locking takes under 2 minutes with clear signage and colour-by-level pouches."},
+  {"slug": "how-do-schools-manage-exit-unlocking", "question": "How do schools manage exit unlocking?", "answer": "Teachers or discipline staff manage unlock points; multiple stations prevent bottlenecks after school."},
+  {"slug": "what-about-emergencies", "question": "What about emergencies?", "answer": "The magnetic clip opens quickly without tools. Phones stay powered for alerts while inaccessible during class."},
+  {"slug": "what-about-after-school-activities", "question": "What about after-school activities?", "answer": "CCAs can unlock under staff supervision; sling and name-card options keep pouches organised on the move."},
+  {"slug": "what-about-exams", "question": "What about exams?", "answer": "Pouches enforce zero-phone conditions in halls; numbered seals simplify spot checks by invigilators."},
+  {"slug": "what-if-student-forgets-their-phone-in-the-pouch", "question": "What if a student forgets their phone in the pouch?", "answer": "Teacher unlocks with the magnetic clip; serial numbers and name cards trace ownership quickly."},
+  {"slug": "can-you-add-school-logo", "question": "Can you add the school logo?", "answer": "Yes. We print school crests and cohort colour trims for quick visual control."},
+  {"slug": "can-you-customise-colours", "question": "Can you customise colours?", "answer": "Colours can be set by level, house, or CCA; we share swatches during procurement."},
+  {"slug": "can-you-customise-name-card", "question": "Can you customise name card?", "answer": "Each pouch includes a clear window for student/teacher cards to support circulation and accountability."},
+  {"slug": "can-you-add-sling", "question": "Can you add a sling?", "answer": "Yes. Optional sling keeps the pouch visible during transitions and reduces drops."},
+  {"slug": "are-you-a-local-supplier", "question": "Are you a local supplier?", "answer": "Yes. Chu Technologies is Singapore-based with onsite support and next-day replacements."},
+  {"slug": "do-you-manufacture-in-house", "question": "Do you manufacture in-house?", "answer": "We fabricate locally to control quality and lead times, with school-focused materials and stitching."},
+  {"slug": "are-you-a-registered-government-vendor", "question": "Are you a registered government vendor?", "answer": "Yes. Registered vendor with procurement experience supplying public schools."},
+  {"slug": "what-is-your-uen", "question": "What is your UEN?", "answer": "UEN 201926755K under Chu Technologies Pte Ltd."},
+  {"slug": "how-to-request-a-quote", "question": "How to request a quote?", "answer": "Use the lead form or WhatsApp; we provide spec sheets, samples, and approval-ready quotes."},
+  {"slug": "do-you-support-bulk-orders", "question": "Do you support bulk orders?", "answer": "Yes. We handle full-school rollouts and phased pilots with buffer stock."},
+  {"slug": "what-is-the-lead-time", "question": "What is the lead time?", "answer": "Standard lead time is 2–4 weeks; rush options available for pilots with in-house manufacturing."},
+  {"slug": "do-you-provide-onboarding", "question": "Do you provide onboarding?", "answer": "We supply teacher scripts, parent letters, and workflow posters; onsite briefings available."}
 ]

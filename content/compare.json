@@ -1,37 +1,146 @@
 [
   {
-    "slug": "lockable-pouch-vs-standard-bags",
-    "title": "Lockable pouch vs standard zip bags",
-    "description": "Why lockable, numbered pouches outperform simple zip bags for school operations.",
+    "slug": "phone-pouch-vs-lockers",
+    "title": "School phone pouch vs shared phone lockers",
+    "description": "Why classroom-issued magnetic clip pouches reduce queues and maintenance compared to corridor locker banks.",
     "details": [
+      "No corridor bottlenecks; pouches travel with the class",
+      "Magnetic clip is child-safe and quick to release during emergencies",
+      "Lower install cost than metal lockers; no drilling or electrical",
+      "Colour-by-level and logo branding keep cohorts organised",
+      "Local supplier with next-day replacements"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-collect-and-hold",
+    "title": "Phone pouch vs collect-and-hold baskets",
+    "description": "Structured numbering and seals reduce disputes versus ad-hoc baskets or trays.",
+    "details": [
+      "Each pouch is numbered with a name card slot for accountability",
+      "Tamper-evident clip avoids loose phones mixing in a basket",
+      "Students retain custody while phones stay inaccessible",
+      "Faster return at dismissal with multiple unlock points",
+      "Local support for replacements and training"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-classroom-cubby",
+    "title": "Phone pouch vs classroom cubby shelves",
+    "description": "Mobile pouches prevent cluttered cubbies and accidental swaps.",
+    "details": [
+      "No need for shelf space in every classroom",
+      "Unique numbering plus name card reduces mix-ups",
+      "Pouches stay with students during room changes or CCAs",
+      "Colour coding by level simplifies hall transitions",
+      "Child-safe magnetic clip with no sharp pins"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-mdm-only",
+    "title": "Phone pouch vs MDM-only controls",
+    "description": "Physical inaccessibility complements device management tools for true phone-free lessons.",
+    "details": [
+      "Works even if students bypass MDM or use secondary devices",
+      "Instantly enforces no-screen time during exams or assemblies",
+      "No Wi-Fi dependency; usable in halls and fields",
+      "Supports visitors and parents without onboarding",
+      "Local supplier with procurement-ready documentation"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-signal-jammer",
+    "title": "Phone pouch vs signal jammer",
+    "description": "Safer than radio jammers and compliant with school environments.",
+    "details": [
+      "No regulatory risk or interference with emergency calls",
+      "Phones remain powered for critical alerts but inaccessible",
+      "No installation; works across classrooms, halls, or buses",
+      "Magnetic clip avoids sharp needles used in some venues",
+      "Supports colour branding and school logo"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-honor-system",
+    "title": "Phone pouch vs honor system",
+    "description": "Visible, numbered pouches reduce temptation and disputes compared to self-regulated pockets.",
+    "details": [
+      "Teachers can spot-check numbered pouches in seconds",
+      "Name card window links each pouch to a student",
+      "Magnetic clip is quick for emergencies yet secure for class",
+      "Works alongside discipline policies without confrontation",
+      "Local supplier provides onboarding scripts"
+    ]
+  },
+  {
+    "slug": "local-supplier-vs-imported",
+    "title": "Local supplier vs imported pouches",
+    "description": "Singapore-based manufacturing with faster replacements and procurement compliance.",
+    "details": [
+      "Registered government vendor, UEN 201926755K",
+      "In-house production with QC tuned for schools",
+      "Next-day replacements reduce downtime",
+      "Custom colours by level and logo printing included",
+      "Local WhatsApp support and site visits"
+    ]
+  },
+  {
+    "slug": "custom-branded-vs-generic",
+    "title": "Custom branded pouches vs generic sleeves",
+    "description": "Branding improves control and student accountability versus plain sleeves.",
+    "details": [
+      "School logo and cohort colour make pouches instantly recognisable",
+      "Name card slot prevents swaps between students",
+      "Durable stitching built for daily circulation",
+      "Magnetic clip avoids sharp pins used in some imported sleeves",
+      "Local supplier for reorders and CCA-specific variants"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-phone-ban-only",
+    "title": "Phone pouch vs policy-only phone ban",
+    "description": "Physical reinforcement reduces enforcement load versus rules alone.",
+    "details": [
+      "Visible compliance reduces daily reminders",
+      "Students keep custody while screens stay locked away",
+      "Supports rapid checks during assemblies",
+      "Works for visitors or relief teachers without system logins",
+      "Local support for comms templates and parent FAQs"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-classroom-phone-trays",
+    "title": "Phone pouch vs classroom phone trays",
+    "description": "Fewer mix-ups and faster movement compared to shared trays.",
+    "details": [
+      "Numbered pouch per student avoids crowding around a tray",
+      "Magnetic clip seals while allowing urgent unlocks",
+      "Colour-coded by level for hall transitions",
+      "Name card windows speed up accountability",
+      "Local replacements prevent gaps when trays get damaged"
+    ]
+  },
+  {
+    "slug": "phone-pouch-vs-student-backpack-storage",
+    "title": "Phone pouch vs keeping phones in backpacks",
+    "description": "Lockable pouches remove temptation and accidental use from bags.",
+    "details": [
+      "Magnetic clip stops casual checking during class",
+      "Sling option keeps pouches visible during movement",
       "Tamper-evident seals reduce disputes",
-      "Unique numbering supports accountability",
-      "Local supplier with fast replacements",
-      "Comfortable sling and name card options"
+      "Works during CCAs and excursions without extra furniture",
+      "Local supplier with training for form teachers"
     ]
   },
   {
-    "slug": "pouch-vs-phone-lockers",
-    "title": "Lockable pouches vs phone lockers",
-    "description": "How classroom-issued pouches reduce bottlenecks compared to corridor locker banks.",
+    "slug": "phone-pouch-vs-phone-disable-apps",
+    "title": "Phone pouch vs phone-disable apps",
+    "description": "Hardware enforcement that works even if apps are bypassed or uninstalled.",
     "details": [
-      "Pouches travel with classes, so there is no crowding at shared lockers",
-      "Numbered tags and name cards make spot checks quick for form teachers",
-      "Lower installation cost than metal lockers; no drilling or electrical",
-      "Magnetic clip lock is child-safe and quick to release during emergencies",
-      "Colour by level and logo printing keeps cohorts visually organised"
-    ]
-  },
-  {
-    "slug": "pouch-vs-yondr",
-    "title": "School pouch programme vs Yondr-style sleeves",
-    "description": "Singapore-made magnetic clip pouches compared with Yondr needle-pin locks used in US venues.",
-    "details": [
-      "Our magnetic clip uses no needle to protect students and bags from punctures",
-      "Colour by level and school logo customisation for easy visual control",
-      "Local supplier with next-day replacements; no overseas lead time",
-      "Name card window and sling included for circulation during recess or ECAs",
-      "Magnetic clip stays secure without specialist unlocking tools"
+      "No setup on student devices; supports visitors",
+      "Phones stay powered for alerts but inaccessible",
+      "Magnetic clip is child-safe unlike needle locks",
+      "Custom colours, name card, and logo branding",
+      "Local supplier with procurement-ready docs"
     ]
   }
 ]
