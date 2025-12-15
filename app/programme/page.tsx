@@ -49,15 +49,15 @@ const comparisonRows = [
 
 export default function ProgrammePage() {
   return (
-    <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <section className="hero-banner govuk-!-margin-bottom-7">
-        <div className="govuk-grid-row">
-          <div className="govuk-grid-column-two-thirds">
-            <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">What is the School Phone Pouch Programme</h1>
+    <div className="section-stack govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+      <section className="page-hero">
+        <div className="hero-grid">
+          <div>
+            <h1 className="govuk-heading-xl govuk-!-margin-bottom-2">What is the School Phone Pouch Programme</h1>
             <p className="govuk-body-l govuk-!-margin-bottom-4">
               A consistent, easy-to-audit phone management solution for schools: visible compliance, student peace of mind, and flexible use across spaces.
             </p>
-            <div className="govuk-button-group govuk-!-margin-bottom-2">
+            <div className="hero-actions govuk-!-margin-bottom-2">
               <Link href="/contact" className="govuk-button" role="button">
                 Book a demo
               </Link>
@@ -67,7 +67,7 @@ export default function ProgrammePage() {
             </div>
             <p className="govuk-body">Lock that can only be unlocked using an unlocking base. Compatible with all phone models.</p>
           </div>
-          <div className="govuk-grid-column-one-third">
+          <div>
             <div className="cta-panel">
               <h3 className="govuk-heading-m govuk-!-margin-bottom-2">Registered and ready</h3>
               <p className="govuk-body govuk-!-margin-bottom-2">Government registered vendor on vendors@gov, since 2019.</p>
@@ -77,22 +77,20 @@ export default function ProgrammePage() {
         </div>
       </section>
 
-      <section className="govuk-grid-row govuk-!-margin-bottom-6">
-        <div className="govuk-grid-column-one-half">
+      <section className="section-stack">
+        <div className="supporting-grid">
           <div className="content-card">
             <h2 className="govuk-heading-l">Problem</h2>
-            <ul className="govuk-list govuk-list--bullet">
+            <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
               <li>Students are often distracted by smartphones.</li>
               <li>Schools and exam centres need simple, visible compliance.</li>
               <li>Bags and pockets still allow discreet phone use.</li>
               <li>Administrators need a consistent, easy-to-audit solution.</li>
             </ul>
           </div>
-        </div>
-        <div className="govuk-grid-column-one-half">
           <div className="content-card">
             <h2 className="govuk-heading-l">Solution</h2>
-            <ul className="govuk-list govuk-list--bullet">
+            <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
               <li>Each student places their phone into a personal phone pouch as they enter a phone-free space.</li>
               <li>
                 The pouch uses a safe clip mechanism, and can be unlocked using a magnetic base when students are allowed to use their phones again.
@@ -105,7 +103,7 @@ export default function ProgrammePage() {
         </div>
       </section>
 
-      <section className="contrast-section govuk-!-margin-bottom-6">
+      <section className="contrast-section">
         <h2 className="govuk-heading-l">Already rolled out in schools around the US</h2>
         <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-3">
           <li>This solution to prevent classroom phone usage is very popular in the US.</li>
@@ -114,56 +112,60 @@ export default function ProgrammePage() {
           <p className="govuk-body govuk-!-margin-bottom-1">The lock they use has a needle in the mechanism!</p>
           <p className="govuk-body govuk-!-margin-bottom-1">Our lockable phone pouches do not use needles.</p>
           <p className="govuk-body govuk-!-margin-bottom-1">We use child-safe clips with locking technology.</p>
-          <p className="govuk-body">Student safety is our PRIORITY.</p>
+          <p className="govuk-body govuk-!-margin-bottom-0">Student safety is our PRIORITY.</p>
         </div>
       </section>
 
-      <section className="govuk-!-margin-bottom-6">
-        <h2 className="govuk-heading-l">School Phone Pouch Programme vs Phone Lockers</h2>
-        <table className="govuk-table">
-          <caption className="govuk-table__caption govuk-table__caption--m">Comparison</caption>
-          <thead className="govuk-table__head">
-            <tr className="govuk-table__row">
-              <th scope="col" className="govuk-table__header">
-                Area
-              </th>
-              <th scope="col" className="govuk-table__header">
-                Programme
-              </th>
-              <th scope="col" className="govuk-table__header">
-                Phone lockers
-              </th>
-            </tr>
-          </thead>
-          <tbody className="govuk-table__body">
-            {comparisonRows.map((row) => (
-              <tr className="govuk-table__row" key={row.title}>
-                <th scope="row" className="govuk-table__header">
-                  {row.title}
+      <section className="section-stack">
+        <div className="section-heading">
+          <h2 className="govuk-heading-l govuk-!-margin-bottom-2">School Phone Pouch Programme vs Phone Lockers</h2>
+        </div>
+        <div className="content-card">
+          <table className="govuk-table">
+            <caption className="govuk-table__caption govuk-table__caption--m">Comparison</caption>
+            <thead className="govuk-table__head">
+              <tr className="govuk-table__row">
+                <th scope="col" className="govuk-table__header">
+                  Area
                 </th>
-                <td className="govuk-table__cell">
-                  <ul className="govuk-list govuk-list--bullet">
-                    {row.programme.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </td>
-                <td className="govuk-table__cell">
-                  <ul className="govuk-list govuk-list--bullet">
-                    {row.lockers.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                </td>
+                <th scope="col" className="govuk-table__header">
+                  Programme
+                </th>
+                <th scope="col" className="govuk-table__header">
+                  Phone lockers
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="govuk-table__body">
+              {comparisonRows.map((row) => (
+                <tr className="govuk-table__row" key={row.title}>
+                  <th scope="row" className="govuk-table__header">
+                    {row.title}
+                  </th>
+                  <td className="govuk-table__cell">
+                    <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+                      {row.programme.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </td>
+                  <td className="govuk-table__cell">
+                    <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+                      {row.lockers.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
 
-      <div className="govuk-panel govuk-panel--confirmation">
-        <h3 className="govuk-panel__title">Please contact us immediately to roll out in 2026!</h3>
-        <div className="govuk-button-group">
+      <section className="callout-banner">
+        <h3 className="govuk-heading-m govuk-!-margin-bottom-2">Please contact us immediately to roll out in 2026!</h3>
+        <div className="hero-actions govuk-!-margin-bottom-0">
           <Link className="govuk-button" href="/contact" role="button">
             Book a demo
           </Link>
@@ -171,7 +173,7 @@ export default function ProgrammePage() {
             WhatsApp us
           </a>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

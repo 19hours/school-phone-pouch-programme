@@ -11,14 +11,22 @@ export default function Footer() {
         </div>
         <div className="govuk-grid-row">
           <div className="govuk-grid-column-one-half">
+            <p className="govuk-heading-m govuk-!-margin-bottom-1">SG School Phone Pouch Programme</p>
+            <p className="govuk-body">Secure, visible phone compliance with lockable pouches and unlocking bases.</p>
             <p className="govuk-body">© {new Date().getFullYear()} {COMPANY_NAME}</p>
           </div>
-          <div className="govuk-grid-column-one-half">
-            <ul className="govuk-list govuk-list--inline govuk-!-margin-bottom-0 govuk-!-display-flex govuk-!-justify-content-flex-end" aria-label="Footer links">
-              <li><Link className="govuk-link" href="/privacy">Privacy</Link></li>
-              <li><Link className="govuk-link" href="/terms">Terms</Link></li>
-              <li><Link className="govuk-link" href="/contact">Contact</Link></li>
-            </ul>
+          <div className="govuk-grid-column-one-half govuk-!-text-align-right">
+            <div className="footer-links" aria-label="Footer links">
+              <Link className="govuk-link" href="/privacy">
+                Privacy
+              </Link>
+              <Link className="govuk-link" href="/terms">
+                Terms
+              </Link>
+              <Link className="govuk-link" href="/contact">
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
       </div>

@@ -11,15 +11,15 @@ export const metadata: Metadata = baseMetadata(
 
 export default function HowItWorksPage() {
   return (
-    <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <section className="hero-banner govuk-!-margin-bottom-7">
-        <div className="govuk-grid-row">
-          <div className="govuk-grid-column-two-thirds">
-            <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">How it works</h1>
-            <p className="govuk-body-l govuk-!-margin-bottom-3">
+    <div className="section-stack govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+      <section className="page-hero">
+        <div className="hero-grid">
+          <div>
+            <h1 className="govuk-heading-xl govuk-!-margin-bottom-2">How it works</h1>
+            <p className="govuk-body-l govuk-!-margin-bottom-4">
               The School Phone Pouch Programme keeps phones locked during phone-free periods while staying visible and easy to audit.
             </p>
-            <div className="govuk-button-group">
+            <div className="hero-actions">
               <Link href="/contact" className="govuk-button" role="button">
                 Book a demo
               </Link>
@@ -28,7 +28,7 @@ export default function HowItWorksPage() {
               </a>
             </div>
           </div>
-          <div className="govuk-grid-column-one-third">
+          <div>
             <div className="cta-panel">
               <h3 className="govuk-heading-m govuk-!-margin-bottom-2">Simple, visible routine</h3>
               <p className="govuk-body">Issue pouches, brief students and staff, and keep compliance checks visible.</p>
@@ -37,51 +37,48 @@ export default function HowItWorksPage() {
         </div>
       </section>
 
-      <section className="govuk-grid-row govuk-!-margin-bottom-6">
-        <div className="govuk-grid-column-one-half">
+      <section className="section-stack">
+        <div className="section-heading">
+          <h2 className="govuk-heading-l govuk-!-margin-bottom-2">A simple routine that creates fast, visible compliance checks for teachers and administrators.</h2>
+        </div>
+        <div className="supporting-grid">
           <div className="content-card">
-            <h2 className="govuk-heading-l">Step 1: Phones in pouches at entry</h2>
+            <h3 className="govuk-heading-m">Step 1: Phones in pouches at entry</h3>
             <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-              <li>Students place their phones into personal phone pouches when entering a phone-free space.</li>
+              <li>When students enter a phone-free space (for example, a classroom or assembly hall), they place their phones into their personal pouches.</li>
+              <li>Each student has a clearly labelled pouch.</li>
               <li>Teacher or invigilator can visually confirm that each student has their phone secured.</li>
             </ul>
           </div>
-        </div>
-        <div className="govuk-grid-column-one-half">
           <div className="content-card">
-            <h2 className="govuk-heading-l">Step 2: Phones remain with students</h2>
+            <h3 className="govuk-heading-m">Step 2: Phones remain with students</h3>
             <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
-              <li>Students keep their pouches with them, reducing anxiety about loss or theft.</li>
+              <li>Students keep their pouches with them throughout the day.</li>
+              <li>Reduces anxiety about theft or loss because phones stay with students.</li>
               <li>Maintains visibility: everyone can see phones are secured, without needing lockers.</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section className="govuk-grid-row govuk-!-margin-bottom-6">
-        <div className="govuk-grid-column-one-half">
           <div className="content-card">
-            <h2 className="govuk-heading-l">Step 3: Unlock when allowed</h2>
+            <h3 className="govuk-heading-m">Step 3: Unlock when allowed</h3>
             <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
               <li>At allowed times, staff use unlocking bases to open pouches.</li>
               <li>Unlocking bases define where and when phones can be used again.</li>
+              <li>Can be unlocked by admin staff during emergencies.</li>
             </ul>
           </div>
-        </div>
-        <div className="govuk-grid-column-one-half">
           <div className="content-card">
-            <h2 className="govuk-heading-l">Step 4: Consistent checks</h2>
+            <h3 className="govuk-heading-m">Consistency for audit</h3>
             <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
               <li>Easy visual compliance: pouch visible at all times.</li>
               <li>Flexible: works in classrooms, halls, CCAs, camps, exams.</li>
-              <li>Can be unlocked by admin staff during emergencies.</li>
+              <li>Supports simple, repeatable routines for staff and students.</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section className="govuk-panel govuk-panel--confirmation">
-        <h3 className="govuk-panel__title">For interested schools: Please contact us immediately to roll out in 2026!</h3>
+      <section className="callout-banner">
+        <h3 className="govuk-heading-m govuk-!-margin-bottom-0">For interested schools: Please contact us immediately to roll out in 2026!</h3>
       </section>
     </div>
   );

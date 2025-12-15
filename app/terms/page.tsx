@@ -9,9 +9,9 @@ export const metadata: Metadata = baseMetadata(
 
 export default function TermsPage() {
   return (
-    <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <section className="hero-banner govuk-!-margin-bottom-5">
-        <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">Terms of use</h1>
+    <div className="section-stack govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+      <section className="page-hero">
+        <h1 className="govuk-heading-xl govuk-!-margin-bottom-2">Terms of use</h1>
         <p className="govuk-body">Please review these terms when using the SG School Phone Pouch Programme website.</p>
       </section>
       <section className="content-card">

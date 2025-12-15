@@ -11,13 +11,13 @@ export const metadata: Metadata = baseMetadata(
 
 export default function SamplesDemoPage() {
   return (
-    <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <section className="hero-banner govuk-!-margin-bottom-7">
-        <div className="govuk-grid-row">
-          <div className="govuk-grid-column-two-thirds">
-            <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">Samples & demo</h1>
-            <p className="govuk-body-l govuk-!-margin-bottom-3">Request samples or a live walkthrough of the School Phone Pouch Programme.</p>
-            <div className="govuk-button-group">
+    <div className="section-stack govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+      <section className="page-hero">
+        <div className="hero-grid">
+          <div>
+            <h1 className="govuk-heading-xl govuk-!-margin-bottom-2">Samples & demo</h1>
+            <p className="govuk-body-l govuk-!-margin-bottom-4">Request samples or a live walkthrough of the School Phone Pouch Programme.</p>
+            <div className="hero-actions">
               <Link href="/contact" className="govuk-button" role="button">
                 Book a demo
               </Link>
@@ -26,16 +26,22 @@ export default function SamplesDemoPage() {
               </a>
             </div>
           </div>
+          <div>
+            <div className="cta-panel">
+              <h3 className="govuk-heading-m govuk-!-margin-bottom-2">Hands-on validation</h3>
+              <p className="govuk-body">See the pouches and unlocking bases in action before rollout.</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="content-card govuk-!-margin-bottom-6">
+      <section className="content-card">
         <p className="govuk-body">We have demo units available and can demonstrate how the School Phone Pouch Programme works.</p>
         <p className="govuk-body govuk-!-margin-bottom-0">Please contact us via email, WhatsApp, or the form to book a live demo.</p>
       </section>
 
-      <section className="govuk-panel govuk-panel--confirmation">
-        <h3 className="govuk-panel__title">For interested schools: Please contact us immediately to roll out in 2026!</h3>
+      <section className="callout-banner">
+        <h3 className="govuk-heading-m govuk-!-margin-bottom-0">For interested schools: Please contact us immediately to roll out in 2026!</h3>
       </section>
     </div>
   );

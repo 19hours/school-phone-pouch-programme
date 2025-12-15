@@ -9,9 +9,9 @@ export const metadata: Metadata = baseMetadata(
 
 export default function PrivacyPage() {
   return (
-    <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <section className="hero-banner govuk-!-margin-bottom-5">
-        <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">Privacy policy</h1>
+    <div className="section-stack govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+      <section className="page-hero">
+        <h1 className="govuk-heading-xl govuk-!-margin-bottom-2">Privacy policy</h1>
         <p className="govuk-body">We respect your privacy. Contact us for any questions.</p>
       </section>
       <section className="content-card">
