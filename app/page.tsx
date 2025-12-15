@@ -24,9 +24,9 @@ export default function HomePage() {
       />
       <div className="container">
         <TrustStrip />
-        <section className="section">
-          <div className="grid-two">
-            <div className="panel accented">
+        <section className="section section-band">
+          <div className="band-grid">
+            <div className="action-panel problem-panel">
               <h2>Problem: Difficulty in managing phones in classroom environments</h2>
               <ul>
                 <li>Students are often distracted by smartphones.</li>
@@ -35,7 +35,7 @@ export default function HomePage() {
                 <li>Administrators need a consistent, easy-to-audit solution.</li>
               </ul>
             </div>
-            <div className="panel section-tint">
+            <div className="action-panel solution-panel">
               <h2>Solution: School Phone Pouch Programme</h2>
               <ul>
                 <li>Each student places their phone into a personal phone pouch as they enter a phone-free space.</li>
@@ -44,7 +44,7 @@ export default function HomePage() {
                 <li>Can be unlocked by admin staff during emergencies.</li>
                 <li>Enables fast, visual compliance checks for teachers and administrators.</li>
               </ul>
-              <div className="card" style={{ marginTop: '1rem' }}>
+              <div className="detail-slab">
                 <ul>
                   <li>Lock that can only be unlocked using an unlocking base.</li>
                   <li>Compatible with all phone models.</li>
@@ -53,8 +53,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="section section-tint">
-          <div className="safety-panel">
+        <section className="section split-section">
+          <div className="safety-lockup">
             <h2>Student safety is our priority</h2>
             <ul>
               <li>Our lockable phone pouches do not use needles.</li>
@@ -62,9 +62,7 @@ export default function HomePage() {
               <li>Student safety is our PRIORITY.</li>
             </ul>
           </div>
-        </section>
-        <section className="section">
-          <div className="panel">
+          <div className="panel accent-edge">
             <h2>Compare approaches</h2>
             <p>See how the School Phone Pouch Programme stacks against phone lockers for control, safety, and ease of rollout.</p>
             <Link href="/programme#comparison" className="button-secondary">View programme vs phone lockers</Link>

@@ -20,6 +20,12 @@ export function LayoutShell({ children }: { children: ReactNode }) {
 
   return (
     <div>
+      <div className="header-ribbon" aria-label="Vendor credibility messaging">
+        <div className="container ribbon-inner">
+          <span>Government registered vendor on vendors@gov, since 2019.</span>
+          <span>Chu Technologies Pte Ltd (UEN: 201926755K).</span>
+        </div>
+      </div>
       <header className="header">
         <div className="header-inner container">
           <div className="branding">
