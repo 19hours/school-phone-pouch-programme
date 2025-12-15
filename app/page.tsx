@@ -17,31 +17,35 @@ export default function HomePage() {
   const guides = getAllGuides().slice(0, 3)
   const resources = getAllResources().slice(0, 2)
   return (
-    <div className="space-y-12">
+    <div className="space-y-14">
       <Breadcrumbs crumbs={[{ name: 'Home' }]} />
       <section className="grid lg:grid-cols-2 gap-10 lg:items-start">
         <div className="space-y-6">
+          <p className="text-brand-primary font-semibold">Singapore-made, procurement-ready</p>
           <h1 className="text-4xl sm:text-5xl font-bold leading-tight">School Phone Pouch Programme</h1>
-          <p className="text-xl">Lockable, numbered pouches with local Singapore manufacturing, customisation, and an MOE-aligned workflow that keeps classrooms focused.</p>
-          <div className="grid sm:grid-cols-2 gap-4">
-            {["Custom colours by level for easy identification", "School logo and name card window for rapid distribution", "Child-safe magnetic clip lock with no sharp pins", "Comfortable sling and durable build for daily use"].map(point => (
-              <div key={point} className="bg-white rounded-xl shadow p-4">
-                <p className="font-semibold text-lg leading-relaxed">{point}</p>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
-            <Link href="/contact" className="btn btn-primary w-full sm:w-auto text-center">Request a Quote</Link>
-            <Link href="/programme" className="btn btn-secondary w-full sm:w-auto text-center">See Programme</Link>
-          </div>
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
-            <h2 className="text-xl font-semibold">Why schools pick this approach</h2>
+          <p className="text-xl">Lockable, numbered pouches with local manufacturing, custom branding, and an MOE-aligned workflow that keeps classrooms focused while keeping phones secure.</p>
+          <div className="bg-white border border-slate-200 rounded-2xl p-5 space-y-3">
+            <h2 className="text-xl font-semibold">What schools get from day one</h2>
             <ul className="list-disc pl-5 space-y-2 text-lg">
-              <li>Singapore-based team that can meet, demo, and deliver replacements within days.</li>
-              <li>Procurement-ready documentation and references from local deployments.</li>
-              <li>Clear homeroom issuance workflow with accountability via numbering and name cards.</li>
-              <li>Fits both storage-only and carry-to-class policies with the same hardware.</li>
+              <li>Child-safe magnetic clip lock—no needles—plus durable sling and name card window.</li>
+              <li>Colour by level and school logo options for rapid distribution and accountability.</li>
+              <li>Procurement pack: specs, warranty, risk assessment, and deployment timeline.</li>
+              <li>On-site demos and replacement support from a Singapore-based team.</li>
             </ul>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
+              <Link href="/contact" className="btn btn-primary w-full sm:w-auto text-center">Request a Quote</Link>
+              <Link href="/programme" className="btn btn-secondary w-full sm:w-auto text-center">See programme details</Link>
+            </div>
+          </div>
+          <div className="grid sm:grid-cols-2 gap-3">
+            <div className="rounded-xl bg-slate-50 p-4 border border-slate-200">
+              <p className="font-semibold">Fits storage or carry policies</p>
+              <p className="text-lg">Use as central collection at entry or let students carry locked pouches—the hardware and workflow cover both.</p>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-4 border border-slate-200">
+              <p className="font-semibold">Fast routines with accountability</p>
+              <p className="text-lg">Numbering, colour by level, and a visible name card keep entry and dismissal under three minutes per class.</p>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 items-start">
@@ -77,7 +81,7 @@ export default function HomePage() {
       </section>
 
       <section className="grid lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 bg-white shadow rounded-2xl p-6 space-y-3">
+        <div className="lg:col-span-2 bg-white shadow rounded-2xl p-6 space-y-4">
           <h2 className="text-2xl font-semibold">Operational clarity from day one</h2>
           <p className="text-lg">We onboard subject leads, discipline teams, and operations managers with a simple homeroom routine, a secure magnetic clip, and ready-to-use parent and staff comms templates.</p>
           <div className="grid sm:grid-cols-2 gap-3">
@@ -91,7 +95,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
           <h3 className="text-xl font-semibold">Fast next steps</h3>
           <ul className="list-disc pl-5 space-y-2 text-lg">
             <li>Ask for a demo set or schedule a school visit.</li>
@@ -100,6 +104,36 @@ export default function HomePage() {
             <li>Receive delivery timelines and replacement SLA in writing.</li>
           </ul>
           <Link href="/contact" className="btn btn-primary w-full text-center">Speak to us</Link>
+        </div>
+      </section>
+
+      <section className="grid lg:grid-cols-3 gap-6">
+        <div className="bg-white shadow rounded-2xl p-6 space-y-3">
+          <h3 className="text-2xl font-semibold">What a delivery includes</h3>
+          <ul className="list-disc pl-5 space-y-2 text-lg">
+            <li>Lockable pouches with magnetic clip, sling, and name-card window.</li>
+            <li>Colour coding by level and numbered sets for every class.</li>
+            <li>Unlock tools and accountability guide for staff.</li>
+            <li>Parent letter, announcement slides, and entry/exit posters.</li>
+          </ul>
+        </div>
+        <div className="bg-white shadow rounded-2xl p-6 space-y-3">
+          <h3 className="text-2xl font-semibold">Procurement confidence</h3>
+          <ul className="list-disc pl-5 space-y-2 text-lg">
+            <li>Registered government vendor, UEN 201926755K.</li>
+            <li>Local stock and replacements within days, not weeks.</li>
+            <li>Risk assessment, warranty terms, and onboarding plan provided.</li>
+            <li>References available from Singapore school deployments.</li>
+          </ul>
+        </div>
+        <div className="bg-white shadow rounded-2xl p-6 space-y-3">
+          <h3 className="text-2xl font-semibold">Customisation options</h3>
+          <ul className="list-disc pl-5 space-y-2 text-lg">
+            <li>School logo, name card, and colour by level for fast roll-out.</li>
+            <li>Sling preference by cohort; labels for CCA or exam modes.</li>
+            <li>Custom messaging cards inside pouches for reminders.</li>
+            <li>Link directly to <Link className="text-brand-primary font-semibold" href="/customisation">customisation</Link> or <Link className="text-brand-primary font-semibold" href="/contact?topic=customisation">contact</Link> for samples.</li>
+          </ul>
         </div>
       </section>
 
