@@ -1,0 +1,278 @@
+:root {
+  color-scheme: light;
+  --text: #0b0c0c;
+  --link: #1d70b8;
+  --link-hover: #003078;
+  --button: #00703c;
+  --button-hover: #005a2b;
+  --border: #b1b4b6;
+  --muted: #505a5f;
+  --inset: #f3f2f1;
+  --background: #ffffff;
+  --max-width: 1080px;
+  --focus: #ffbf47;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4 {
+  margin: 0 0 0.5rem;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-top: 0;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.container {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
+  padding: 0 1.25rem 2.5rem;
+}
+
+.button {
+  display: inline-block;
+  background: var(--button);
+  color: #fff;
+  padding: 0.75rem 1.4rem;
+  border-radius: 4px;
+  border: 2px solid var(--button);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.button:hover {
+  background: var(--button-hover);
+  border-color: var(--button-hover);
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--link);
+  border-color: var(--link);
+}
+
+.button.secondary:hover {
+  background: #e5e8eb;
+  color: var(--link-hover);
+  border-color: var(--link-hover);
+}
+
+.section {
+  margin: 2.5rem 0;
+}
+
+.inset {
+  background: var(--inset);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--border);
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.caption {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  border-top: 2px solid var(--border);
+  padding: 1.5rem 0 2rem;
+  margin-top: 2rem;
+}
+
+.trust-strip {
+  background: var(--inset);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.notice {
+  color: var(--muted);
+  margin-top: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #d9ead3;
+  color: #0b0c0c;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid #b1cdb2;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1rem;
+  background: #fff;
+  height: 100%;
+}
+
+.timeline {
+  border-left: 3px solid var(--border);
+  padding-left: 1.25rem;
+}
+
+.timeline-step {
+  position: relative;
+  padding: 0.5rem 0 1rem;
+}
+
+.timeline-step::before {
+  content: "";
+  position: absolute;
+  left: -1.3rem;
+  top: 0.5rem;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border: 3px solid var(--button);
+  border-radius: 50%;
+}
+
+.callout {
+  border: 2px solid var(--button);
+  padding: 1rem;
+  border-radius: 6px;
+  background: #eef7f1;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  border-color: var(--link);
+}
+
+.nav-links a.active {
+  border-color: var(--link);
+}
+
+.whatsapp-floating {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 20;
+}
+
+.hero {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.list-inline {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    width: 100%;
+  }
+}
