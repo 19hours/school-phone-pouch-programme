@@ -50,7 +50,29 @@ const comparisonRows = [
 export default function ProgrammePage() {
   return (
     <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <h1 className="govuk-heading-xl">What is the School Phone Pouch Programme</h1>
+      <section className="govuk-grid-row govuk-!-margin-bottom-6">
+        <div className="govuk-grid-column-two-thirds">
+          <h1 className="govuk-heading-xl">What is the School Phone Pouch Programme</h1>
+          <p className="govuk-body-l govuk-!-margin-bottom-4">
+            A consistent, easy-to-audit phone management solution for schools: visible compliance, student peace of mind, and
+            flexible use across spaces.
+          </p>
+          <div className="govuk-button-group">
+            <Link href="/contact" className="govuk-button" role="button">
+              Book a demo
+            </Link>
+            <a className="govuk-button govuk-button--secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+              Chat with us on WhatsApp
+            </a>
+          </div>
+        </div>
+        <div className="govuk-grid-column-one-third">
+          <div className="govuk-inset-text govuk-!-margin-bottom-0">
+            <p className="govuk-body govuk-!-margin-bottom-1">Government registered vendor on vendors@gov, since 2019.</p>
+            <p className="govuk-body">Chu Technologies Pte Ltd (UEN: 201926755K).</p>
+          </div>
+        </div>
+      </section>
 
       <section className="govuk-!-margin-bottom-6">
         <h2 className="govuk-heading-l">Problem</h2>
