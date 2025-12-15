@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --muted: #475569;
+  --border: #e2e8f0;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-6; 
+}
+
+.glass-card {
+  @apply rounded-2xl border border-slate-200 bg-white/90 shadow-card backdrop-blur; 
+}
+
+a {
+  @apply text-brand-blue underline-offset-4 hover:underline;
+}

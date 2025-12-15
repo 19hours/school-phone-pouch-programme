@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title>SG School Phone Pouch Programme</title>
+  <desc>Minimal icon showing a secured phone pouch</desc>
+  <rect x="10" y="8" width="44" height="48" rx="6" fill="#0b3b75" />
+  <rect x="18" y="16" width="28" height="32" rx="4" fill="#e7f1ff" />
+  <rect x="26" y="24" width="12" height="6" rx="2" fill="#0b3b75" />
+  <rect x="22" y="38" width="20" height="6" rx="3" fill="#f2c84b" />
+</svg>
