@@ -5,51 +5,68 @@ import { WHATSAPP_LINK } from '@/lib/site';
 
 export const metadata: Metadata = baseMetadata(
   'Customisation | SG School Phone Pouch Programme',
-  'Pouch colour options, name card holder, and school logo printing for qualifying quantities.',
+  'Custom pouch colours and printing options to match school identity with clear minimum order quantities and pricing.',
   '/customisation'
 );
 
 export default function CustomisationPage() {
   return (
     <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <h1 className="govuk-heading-xl">Customisation</h1>
-
-      <section className="govuk-!-margin-bottom-6">
-        <h2 className="govuk-heading-l">Pouch colour</h2>
-        <ul className="govuk-list govuk-list--bullet">
-          <li>Useful for differentiating different student levels (P1 → Green, P2 → Yellow etc.)</li>
-          <li>Choose from: Red, Orange, Yellow, Green, Blue, Indigo, Purple, Black, Grey.</li>
-          <li>Free for quantities above 1000.</li>
-        </ul>
-      </section>
-
-      <section className="govuk-!-margin-bottom-6">
-        <h2 className="govuk-heading-l">Name card holder for easy identification</h2>
-        <ul className="govuk-list govuk-list--bullet">
-          <li>Useful for students to see who the pouch belongs to</li>
-          <li>+ $0.50 per pouch</li>
-        </ul>
-      </section>
-
-      <section className="govuk-!-margin-bottom-6">
-        <h2 className="govuk-heading-l">School logo printing</h2>
-        <ul className="govuk-list govuk-list--bullet">
-          <li>Add your school logo (single colour print) on every pouch for more personalisation!</li>
-          <li>+ $0.50 per pouch, minimum quantity is 1000</li>
-        </ul>
-      </section>
-
-      <div className="govuk-panel govuk-panel--confirmation">
-        <h3 className="govuk-panel__title">Book a demo</h3>
-        <div className="govuk-button-group">
-          <Link className="govuk-button" href="/contact" role="button">
-            Book a demo
-          </Link>
-          <a className="govuk-button govuk-button--secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-            WhatsApp us
-          </a>
+      <section className="hero-banner govuk-!-margin-bottom-7">
+        <div className="govuk-grid-row">
+          <div className="govuk-grid-column-two-thirds">
+            <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">Customisation</h1>
+            <p className="govuk-body-l govuk-!-margin-bottom-3">Match pouches to your school colours and add your crest for easy identification.</p>
+            <div className="govuk-button-group">
+              <Link href="/contact" className="govuk-button" role="button">
+                Book a demo
+              </Link>
+              <a className="govuk-button govuk-button--secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                Chat with us on WhatsApp
+              </a>
+            </div>
+          </div>
+          <div className="govuk-grid-column-one-third">
+            <div className="cta-panel">
+              <h3 className="govuk-heading-m govuk-!-margin-bottom-2">Make it yours</h3>
+              <p className="govuk-body">Choose from our palette or customise with school branding.</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="govuk-grid-row govuk-!-margin-bottom-6">
+        <div className="govuk-grid-column-one-half">
+          <div className="content-card">
+            <h2 className="govuk-heading-l">Colour choices</h2>
+            <ul className="govuk-list govuk-list--bullet">
+              <li>Standard colours: red, black, dark blue</li>
+              <li>Custom colours available (contact us)</li>
+            </ul>
+          </div>
+        </div>
+        <div className="govuk-grid-column-one-half">
+          <div className="content-card">
+            <h2 className="govuk-heading-l">School crest printing</h2>
+            <ul className="govuk-list govuk-list--bullet">
+              <li>$2 per pouch</li>
+              <li>Minimum 300 pouches for printing</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="contrast-section govuk-!-margin-bottom-6">
+        <h2 className="govuk-heading-m">Bulk minimums</h2>
+        <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-0">
+          <li>Custom colours: 200 pouches minimum per colour</li>
+          <li>School crest printing: 300 pouches minimum</li>
+        </ul>
+      </section>
+
+      <section className="govuk-panel govuk-panel--confirmation">
+        <h3 className="govuk-panel__title">For interested schools: Please contact us immediately to roll out in 2026!</h3>
+      </section>
     </div>
   );
 }

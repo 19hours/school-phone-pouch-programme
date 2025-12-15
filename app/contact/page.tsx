@@ -1,47 +1,52 @@
 import { Metadata } from 'next';
 import { baseMetadata } from '@/lib/metadata';
-import { WHATSAPP_LINK } from '@/lib/site';
+import { CONTACT_EMAIL, CONTACT_WHATSAPP } from '@/lib/site';
 
 export const metadata: Metadata = baseMetadata(
   'Contact | SG School Phone Pouch Programme',
-  'Contact Kevin Chu to discuss rollout in 2026, pricing tiers, and a school demo.',
+  'Contact Kevin Chu to discuss rolling out the School Phone Pouch Programme, book demos, or request samples.',
   '/contact'
 );
 
 export default function ContactPage() {
   const tallyUrl = process.env.NEXT_PUBLIC_TALLY_URL;
+  const showWarning = !tallyUrl;
+
   return (
     <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      <h1 className="govuk-heading-xl">Contact</h1>
-      <p className="govuk-body-l">For interested schools: Please contact us immediately to roll out in 2026!</p>
+      <section className="hero-banner govuk-!-margin-bottom-7">
+        <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">Contact us</h1>
+        <p className="govuk-body-l govuk-!-margin-bottom-3">
+          Priority message: For interested schools, please contact us immediately to roll out in 2026!
+        </p>
+        <div className="content-card">
+          <h2 className="govuk-heading-m">Person in charge</h2>
+          <p className="govuk-body">Kevin Chu</p>
+          <ul className="govuk-list govuk-list--bullet">
+            <li>Email: <a className="govuk-link" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></li>
+            <li>WhatsApp: <a className="govuk-link" href={`https://wa.me/65${CONTACT_WHATSAPP}`}>{CONTACT_WHATSAPP}</a></li>
+          </ul>
+        </div>
+      </section>
 
-      <div className="contact-block govuk-!-margin-bottom-5">
-        <p className="govuk-body">Person in charge: Kevin Chu</p>
-        <p className="govuk-body">Email: kevin.chu@ct.com.sg</p>
-        <p className="govuk-body">WhatsApp: 98222723</p>
-      </div>
-
-      {tallyUrl ? (
-        <iframe
-          title="Tally contact form"
-          src={tallyUrl}
-          width="100%"
-          height="600"
-          allowFullScreen
-        ></iframe>
-      ) : (
-        <div className="govuk-inset-text">NEXT_PUBLIC_TALLY_URL is not set. Please configure the Tally embed URL.</div>
-      )}
-
-      <p className="govuk-body govuk-!-margin-top-4">
-        By submitting this form, you agree to be contacted about the SG School Phone Pouch Programme.
-      </p>
-
-      <div className="govuk-button-group govuk-!-margin-top-4">
-        <a className="govuk-button govuk-button--secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-          Chat with us on WhatsApp
-        </a>
-      </div>
+      <section className="content-card govuk-!-margin-bottom-6">
+        <h2 className="govuk-heading-l">Get in touch</h2>
+        {showWarning && (
+          <div className="govuk-inset-text">
+            <p className="govuk-body">Set NEXT_PUBLIC_TALLY_URL to embed the contact form.</p>
+          </div>
+        )}
+        {tallyUrl && (
+          <iframe
+            title="Contact form"
+            src={tallyUrl}
+            width="100%"
+            height="600"
+            allowFullScreen
+            loading="lazy"
+          />
+        )}
+      </section>
     </div>
   );
 }

@@ -10,25 +10,36 @@ export default function Header() {
   const toggleMenu = () => setIsOpen((open) => !open);
 
   return (
-    <header className="site-header">
+    <header className="site-header" role="banner">
       <div className="govuk-width-container neutral-header">
         <div className="nav-row">
-          <Link href="/" className="govuk-heading-m" aria-label="Home">
-            {SITE_NAME}
-          </Link>
-          <div className="nav-actions">
-            <Link href="/contact" className="govuk-button" role="button">
-              Book a demo
+          <div className="brand-block">
+            <Link href="/" className="govuk-heading-m site-name" aria-label="Home">
+              {SITE_NAME}
             </Link>
-            <a className="govuk-link secondary-link" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-              WhatsApp us
-            </a>
-            <button type="button" className="nav-toggle govuk-button govuk-button--secondary" onClick={toggleMenu}>
+            <p className="govuk-body-s govuk-!-margin-bottom-0">Secure, visible phone compliance for schools</p>
+          </div>
+          <div className="nav-actions" role="navigation" aria-label="Primary">
+            <div className="inline-links">
+              <a className="govuk-link secondary-link" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                WhatsApp us
+              </a>
+              <Link href="/contact" className="govuk-button" role="button">
+                Book a demo
+              </Link>
+            </div>
+            <button
+              type="button"
+              className="nav-toggle govuk-button govuk-button--secondary"
+              onClick={toggleMenu}
+              aria-expanded={isOpen}
+              aria-controls="primary-navigation"
+            >
               {isOpen ? 'Close menu' : 'Menu'}
             </button>
           </div>
         </div>
-        <nav className={`nav-links ${isOpen ? 'nav-links--open' : ''}`}>
+        <nav id="primary-navigation" className={`nav-links ${isOpen ? 'nav-links--open' : ''}`} aria-label="Site">
           <Link href="/how-it-works" className="govuk-link">
             How it works
           </Link>

@@ -50,64 +50,67 @@ const comparisonRows = [
 export default function ProgrammePage() {
   return (
     <div className="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+      <section className="hero-banner govuk-!-margin-bottom-7">
+        <div className="govuk-grid-row">
+          <div className="govuk-grid-column-two-thirds">
+            <h1 className="govuk-heading-xl govuk-!-margin-bottom-3">What is the School Phone Pouch Programme</h1>
+            <p className="govuk-body-l govuk-!-margin-bottom-4">
+              A consistent, easy-to-audit phone management solution for schools: visible compliance, student peace of mind, and flexible use across spaces.
+            </p>
+            <div className="govuk-button-group govuk-!-margin-bottom-2">
+              <Link href="/contact" className="govuk-button" role="button">
+                Book a demo
+              </Link>
+              <a className="govuk-button govuk-button--secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
+                Chat with us on WhatsApp
+              </a>
+            </div>
+            <p className="govuk-body">Lock that can only be unlocked using an unlocking base. Compatible with all phone models.</p>
+          </div>
+          <div className="govuk-grid-column-one-third">
+            <div className="cta-panel">
+              <h3 className="govuk-heading-m govuk-!-margin-bottom-2">Registered and ready</h3>
+              <p className="govuk-body govuk-!-margin-bottom-2">Government registered vendor on vendors@gov, since 2019.</p>
+              <p className="govuk-body">Chu Technologies Pte Ltd (UEN: 201926755K).</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="govuk-grid-row govuk-!-margin-bottom-6">
-        <div className="govuk-grid-column-two-thirds">
-          <h1 className="govuk-heading-xl">What is the School Phone Pouch Programme</h1>
-          <p className="govuk-body-l govuk-!-margin-bottom-4">
-            A consistent, easy-to-audit phone management solution for schools: visible compliance, student peace of mind, and
-            flexible use across spaces.
-          </p>
-          <div className="govuk-button-group">
-            <Link href="/contact" className="govuk-button" role="button">
-              Book a demo
-            </Link>
-            <a className="govuk-button govuk-button--secondary" href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-              Chat with us on WhatsApp
-            </a>
+        <div className="govuk-grid-column-one-half">
+          <div className="content-card">
+            <h2 className="govuk-heading-l">Problem</h2>
+            <ul className="govuk-list govuk-list--bullet">
+              <li>Students are often distracted by smartphones.</li>
+              <li>Schools and exam centres need simple, visible compliance.</li>
+              <li>Bags and pockets still allow discreet phone use.</li>
+              <li>Administrators need a consistent, easy-to-audit solution.</li>
+            </ul>
           </div>
         </div>
-        <div className="govuk-grid-column-one-third">
-          <div className="govuk-inset-text govuk-!-margin-bottom-0">
-            <p className="govuk-body govuk-!-margin-bottom-1">Government registered vendor on vendors@gov, since 2019.</p>
-            <p className="govuk-body">Chu Technologies Pte Ltd (UEN: 201926755K).</p>
+        <div className="govuk-grid-column-one-half">
+          <div className="content-card">
+            <h2 className="govuk-heading-l">Solution</h2>
+            <ul className="govuk-list govuk-list--bullet">
+              <li>Each student places their phone into a personal phone pouch as they enter a phone-free space.</li>
+              <li>
+                The pouch uses a safe clip mechanism, and can be unlocked using a magnetic base when students are allowed to use their phones again.
+              </li>
+              <li>Pouch stays with the student entire day, easy to show the phone is secured.</li>
+              <li>Can be unlocked by admin staff during emergencies.</li>
+              <li>Enables fast, visual compliance checks for teachers and administrators.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      <section className="govuk-!-margin-bottom-6">
-        <h2 className="govuk-heading-l">Problem</h2>
-        <ul className="govuk-list govuk-list--bullet">
-          <li>Students are often distracted by smartphones.</li>
-          <li>Schools and exam centres need simple, visible compliance.</li>
-          <li>Bags and pockets still allow discreet phone use.</li>
-          <li>Administrators need a consistent, easy-to-audit solution.</li>
-        </ul>
-      </section>
-
-      <section className="govuk-!-margin-bottom-6">
-        <h2 className="govuk-heading-l">Solution</h2>
-        <ul className="govuk-list govuk-list--bullet">
-          <li>Each student places their phone into a personal phone pouch as they enter a phone-free space.</li>
-          <li>
-            The pouch uses a safe clip mechanism, and can be unlocked using a magnetic base when students are allowed to use their
-            phones again.
-          </li>
-          <li>Pouch stays with the student entire day, easy to show the phone is secured.</li>
-          <li>Can be unlocked by admin staff during emergencies.</li>
-          <li>Enables fast, visual compliance checks for teachers and administrators.</li>
-        </ul>
-        <div className="govuk-inset-text">
-          <p className="govuk-body govuk-!-margin-bottom-1">Lock that can only be unlocked using an unlocking base.</p>
-          <p className="govuk-body">Compatible with all phone models.</p>
-        </div>
-      </section>
-
-      <section className="govuk-!-margin-bottom-6">
+      <section className="contrast-section govuk-!-margin-bottom-6">
         <h2 className="govuk-heading-l">Already rolled out in schools around the US</h2>
-        <ul className="govuk-list govuk-list--bullet">
+        <ul className="govuk-list govuk-list--bullet govuk-!-margin-bottom-3">
           <li>This solution to prevent classroom phone usage is very popular in the US.</li>
         </ul>
-        <div className="govuk-inset-text">
+        <div className="govuk-inset-text govuk-!-margin-bottom-0">
           <p className="govuk-body govuk-!-margin-bottom-1">The lock they use has a needle in the mechanism!</p>
           <p className="govuk-body govuk-!-margin-bottom-1">Our lockable phone pouches do not use needles.</p>
           <p className="govuk-body govuk-!-margin-bottom-1">We use child-safe clips with locking technology.</p>

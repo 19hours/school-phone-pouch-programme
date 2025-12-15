@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton';
 import JsonLd from '@/components/JsonLd';
+import CredibilityBar from '@/components/CredibilityBar';
 import { Metadata } from 'next';
 import { getSiteUrl, SITE_NAME, COMPANY_NAME, COMPANY_UEN, CONTACT_EMAIL, CONTACT_WHATSAPP } from '@/lib/site';
 
@@ -46,6 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to main content
         </a>
         <Header />
+        <CredibilityBar />
         <main className="govuk-main-wrapper main-content" id="main-content">
           <div className="govuk-width-container">{children}</div>
         </main>
