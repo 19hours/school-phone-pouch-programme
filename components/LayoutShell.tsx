@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { whatsappLink } from '@/lib/seo';
 
 const navLinks = [
@@ -14,18 +16,35 @@ const navLinks = [
 ];
 
 export function LayoutShell({ children }: { children: ReactNode }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <div>
       <header className="header">
         <div className="header-inner container">
-          <Link href="/" className="site-name">SG School Phone Pouch Programme</Link>
-          <nav className="nav" aria-label="Primary navigation">
-            {navLinks.map((item) => (
-              <Link key={item.href} href={item.href}>{item.label}</Link>
-            ))}
-            <Link className="button" href="/contact">Book a demo</Link>
-            <Link className="button-secondary" href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp us</Link>
-          </nav>
+          <div className="branding">
+            <Link href="/" className="site-name">SG School Phone Pouch Programme</Link>
+            <span className="tagline">Clear, safe phone compliance for schools</span>
+          </div>
+          <button
+            className="nav-toggle"
+            aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? 'Close menu' : 'Menu'}
+          </button>
+          <div className="nav-surface" aria-label="Primary navigation">
+            <nav className={`nav ${menuOpen ? 'is-open' : ''}`} id="primary-navigation">
+              {navLinks.map((item) => (
+                <Link key={item.href} href={item.href}>{item.label}</Link>
+              ))}
+            </nav>
+            <div className="header-actions">
+              <Link className="button" href="/contact">Book a demo</Link>
+              <Link className="button-secondary" href={whatsappLink} target="_blank" rel="noreferrer">WhatsApp us</Link>
+            </div>
+          </div>
         </div>
       </header>
       <main>{children}</main>
