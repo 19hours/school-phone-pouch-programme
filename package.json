@@ -1,0 +1,26 @@
+{
+  "name": "school-phone-pouch-programme",
+  "version": "1.0.0",
+  "description": "Marketing site for SG School Phone Pouch Programme",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.5.9",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.5.4",
+    "@types/react": "18.3.4",
+    "@types/react-dom": "18.3.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.0.10",
+    "typescript": "5.5.4"
+  }
+}
