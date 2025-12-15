@@ -25,7 +25,6 @@ export default function NewsPage({ params }: { params: { slug: string } }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <Breadcrumbs crumbs={[{ name: 'Home', href: '/' }, { name: 'Resources', href: '/resources' }, { name: 'News', href: '/resources/news' }, { name: news.title }]} />
       <h1 className="text-3xl font-bold">{news.title}</h1>
-      <p className="text-lg text-slate-700">Source: <a className="text-brand-primary" href={news.source}>External article</a></p>
       <div className="prose prose-lg">
         <MDXRemote source={news.content} />
       </div>
