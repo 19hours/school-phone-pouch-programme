@@ -63,12 +63,12 @@ export function getAllNews() {
   return readMDXDirectory(newsDir).map(file => {
     const slug = file.replace(/\.mdx$/, '')
     const { data, content } = matter(fs.readFileSync(path.join(newsDir, file), 'utf-8'))
-    return { slug, title: data.title, description: data.description, date: data.date, source: data.source, content }
+    return { slug, title: data.title, description: data.description, date: data.date, content }
   })
 }
 
 export function getNewsBySlug(slug: string) {
   const fullPath = path.join(newsDir, `${slug}.mdx`)
   const { data, content } = matter(fs.readFileSync(fullPath, 'utf-8'))
-  return { slug, title: data.title, description: data.description, date: data.date, source: data.source, content }
+  return { slug, title: data.title, description: data.description, date: data.date, content }
 }
