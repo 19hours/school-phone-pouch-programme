@@ -27,6 +27,13 @@ export default function AboutPage() {
           <p>In-house sewing and QC allow faster replenishment and custom runs without overseas delays.</p>
         </div>
       </div>
+      <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+        <h3 className="text-xl font-semibold">Contact details</h3>
+        <p className="text-lg">Person in charge: Kevin Chu</p>
+        <p className="text-lg">Email: <Link className="text-brand-primary font-semibold" href="mailto:kevin.chu@ct.com.sg">kevin.chu@ct.com.sg</Link></p>
+        <p className="text-lg">WhatsApp: <Link className="text-brand-primary font-semibold" href="https://wa.me/6598222723">98222723</Link></p>
+        <p className="text-lg">Local supplier, registered government vendor (UEN 201926755K), and in-house manufacturer for school phone pouches.</p>
+      </div>
       <div className="flex gap-4">
         <Link href="/contact" className="btn btn-primary">Request a Quote</Link>
         <Link href="/resources" className="btn btn-secondary">Read resources</Link>

@@ -40,18 +40,14 @@ export default function ResourcesIndex() {
           ))}
       </div>
       <div className="space-y-3 bg-slate-50 border border-slate-200 rounded-2xl p-6">
-        <h2 className="text-2xl font-semibold flex items-center gap-2">
-          <span aria-hidden className="text-2xl">🔍</span>
-          Suggested pages to capture more search queries
-        </h2>
-        <p className="text-lg text-slate-700">Publish these to cover common Singapore school search intents:</p>
+        <h2 className="text-2xl font-semibold">Policy and localisation hubs</h2>
+        <p className="text-lg text-slate-700">Use these pages to cover common search intents and give staff a starting point:</p>
         <ul className="list-disc pl-5 space-y-2 text-lg">
-          <li>“Phone pouch policy template for schools” — include ready-to-download parent letters.</li>
-          <li>“How to collect phones before examinations” — step-by-step invigilation workflow.</li>
-          <li>“Compare phone lockers vs lockable pouches” — reinforce safety, cost, and evacuation speed.</li>
-          <li>“Magnetic clip vs pin lock safety” — highlight child-safe clip without needles (vs Yondr).</li>
-          <li>“Custom school phone pouch printing in Singapore” — colours by level, logo, and name card window.</li>
-          <li>“MOE-aligned mobile phone management” — map to common discipline and confiscation policies.</li>
+          <li><Link className="text-brand-primary font-semibold" href="/singapore">Singapore phone policy hub</Link> — links to primary, secondary, and 2026 preparation topics.</li>
+          <li><Link className="text-brand-primary font-semibold" href="/resources/singapore-phone-rules">Singapore phone rules explained</Link> — operational interpretation with MOE references.</li>
+          <li><Link className="text-brand-primary font-semibold" href="/compare/phone-pouch-vs-yondr">School phone pouch vs Yondr</Link> — highlight magnetic clip safety and local supply.</li>
+          <li><Link className="text-brand-primary font-semibold" href="/customisation">Customisation options</Link> — colours by level, logo, name card, and sling.</li>
+          <li><Link className="text-brand-primary font-semibold" href="/guides/entry-exit-workflow-phone-pouch">Entry/exit workflow guide</Link> — step-by-step class routine.</li>
         </ul>
       </div>
     </div>

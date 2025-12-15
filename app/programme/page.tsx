@@ -53,6 +53,54 @@ export default function ProgrammePage() {
           />
         </div>
       </div>
+
+      <section className="grid lg:grid-cols-2 gap-6">
+        <div className="bg-white rounded-2xl shadow p-6 space-y-3">
+          <h2 className="text-2xl font-semibold">Problem we solve</h2>
+          <p className="text-lg">Classrooms struggle with phones hidden in bags, pockets, and lockers. Teachers spend time policing devices instead of starting lessons, and administrators need an auditable system that works for exams, CCAs, and visitors.</p>
+          <ul className="list-disc pl-5 space-y-2 text-lg">
+            <li>Students are distracted by smartphones even when “switched off”.</li>
+            <li>Bag storage still allows discreet use and creates disputes.</li>
+            <li>Schools need a visible, simple routine that relief teachers can run.</li>
+          </ul>
+        </div>
+        <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+          <h2 className="text-2xl font-semibold">Solution in practice</h2>
+          <p className="text-lg">Each student receives a labelled pouch with a child-safe magnetic clip. Phones stay powered but inaccessible, and unlocking happens only at staffed bases.</p>
+          <ul className="list-disc pl-5 space-y-2 text-lg">
+            <li>Pouches stay with the student all day—no locker bottlenecks.</li>
+            <li>Unlock bases release the clip without needles or sharp pins.</li>
+            <li>Serial numbers and name cards keep accountability objective.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="grid lg:grid-cols-3 gap-6">
+        <div className="bg-white rounded-2xl shadow p-6 space-y-3">
+          <h3 className="text-xl font-semibold">Step 1: Phone goes into pouch</h3>
+          <p>At entry to a phone-free space, students insert phones and seal the pouch. Teachers visually check colour-by-level and the name card window.</p>
+        </div>
+        <div className="bg-white rounded-2xl shadow p-6 space-y-3">
+          <h3 className="text-xl font-semibold">Step 2: Pouch stays locked</h3>
+          <p>The pouch remains with the student during lessons, CCAs, and exams. Phones are powered for emergency alerts but inaccessible without the base.</p>
+        </div>
+        <div className="bg-white rounded-2xl shadow p-6 space-y-3">
+          <h3 className="text-xl font-semibold">Step 3: Unlock at a base</h3>
+          <p>When phone use is allowed, students unlock at a staffed base near exits. Multiple bases prevent queues; mobile kits cover events and camps.</p>
+        </div>
+      </section>
+
+      <section className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+        <h2 className="text-2xl font-semibold">Rolling out the programme</h2>
+        <ol className="list-decimal pl-5 space-y-2 text-lg">
+          <li>Identify phone-free spaces and clarify exceptions with discipline and ICT teams.</li>
+          <li>Plan quantities by level and place unlock bases near exits to keep corridors clear.</li>
+          <li>Train staff using provided scripts, posters, and parent letters.</li>
+          <li>Issue pouches and practise the routine for two weeks with spare stock on standby.</li>
+          <li>Review after the first term; relocate bases or adjust signage as needed.</li>
+        </ol>
+        <p className="text-lg">On-site samples and demonstrations can be arranged at schools upon request. WhatsApp us or use the lead form to schedule.</p>
+      </section>
     </div>
   )
 }

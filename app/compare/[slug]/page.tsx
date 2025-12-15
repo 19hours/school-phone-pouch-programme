@@ -24,19 +24,19 @@ export default function ComparisonPage({ params }: { params: { slug: string } })
   if (!item) return <p>Not found</p>
 
   const highlights: Record<string, string> = {
-    'pouch-vs-yondr':
-      'Our pouch uses a magnetic clip with no needle, keeping bags and hands safe while staying secure for assemblies and exams.',
-    'pouch-vs-phone-lockers':
+    'phone-pouch-vs-yondr':
+      'Our pouch uses a magnetic clip with no needle, ships locally, and includes logo, colour, and name card options standard.',
+    'phone-pouch-vs-lockers':
       'Because the pouch travels with the class, teachers avoid locker bottlenecks and can colour-code by level for quick checks.',
-    'lockable-pouch-vs-standard-bags':
+    'phone-pouch-vs-student-backpack-storage':
       'Serial numbers, name cards, and logo printing make accountability clear while staying lightweight for students.'
   }
 
   const related = [
     { href: '/programme', label: 'Programme' },
     { href: '/customisation', label: 'Customisation' },
-    { href: '/faq/locking-mechanism', label: 'FAQ: locking mechanism' },
-    { href: '/guides/implementation-guide', label: 'Implementation guide' }
+    { href: '/faq/how-do-you-unlock-the-pouch', label: 'FAQ: how to unlock' },
+    { href: '/guides/entry-exit-workflow-phone-pouch', label: 'Guide: entry/exit workflow' }
   ]
 
   return (
