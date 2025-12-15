@@ -4,6 +4,7 @@ import { organizationSchema, productSchema } from '@/lib/schema'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import WhatsAppFloatingButton from '@/components/WhatsAppFloatingButton'
+import CredentialsBar from '@/components/CredentialsBar'
 
 export const metadata: Metadata = {
   title: 'School Phone Pouch Programme',
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify([organizationSchema(), productSchema()]) }}
         />
         <Header />
+        <CredentialsBar />
         <main className="max-w-6xl mx-auto px-6 py-10">
           {children}
         </main>
