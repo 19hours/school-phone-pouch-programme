@@ -1,0 +1,19 @@
+<svg width="800" height="1200" viewBox="0 0 800 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+<title id="title">Phone inserted into pouch</title>
+<desc id="desc">Stylised phone partially inserted into a black lockable pouch.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#1B1B1F" offset="0%"/>
+    <stop stop-color="#0E0E12" offset="100%"/>
+  </linearGradient>
+  <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="24" stdDeviation="36" flood-color="#0B0B0F" flood-opacity="0.45"/>
+  </filter>
+</defs>
+<rect x="150" y="160" width="500" height="920" rx="70" fill="url(#bg)" stroke="#2F2F35" stroke-width="14" filter="url(#shadow)"/>
+<rect x="210" y="120" width="380" height="380" rx="40" fill="#E8E9ED" stroke="#D3D4D8" stroke-width="10"/>
+<rect x="230" y="140" width="340" height="340" rx="30" fill="#F7F7FB"/>
+<circle cx="530" cy="180" r="36" fill="#22242B"/>
+<rect x="345" y="560" width="110" height="130" rx="24" fill="#111117" stroke="#2F2F35" stroke-width="10"/>
+<circle cx="400" cy="625" r="38" fill="#1F1F23"/>
+</svg>
