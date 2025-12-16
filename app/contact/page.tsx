@@ -6,7 +6,7 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Contact | SG School Phone Pouch Programme",
-  description: "Contact Kevin Chu to discuss rollout in 2026, pricing, and a school demo.",
+  description: "Contact us now to discuss rollout in 2026, pricing, and a school demo.",
   alternates: { canonical: "/contact" },
 };
 
