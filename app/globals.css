@@ -1,0 +1,292 @@
+/* Buttons: ensure text is vertically centred everywhere */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+/* app/globals.css */
+/* HERO: make the image + overlay cover the FULL hero area (no split). */
+
+.hero-slab {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  /* matches your rounded */
+  min-height: 260px;
+}
+
+/* Force carousel to fill hero-slab fully */
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item {
+  height: 100%;
+}
+
+/* Background image layer */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0b1b2a;
+  /* fallback */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.03);
+}
+
+/* Overlay sits above image, covers same area */
+.hero-overlay-strong {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.18) 45%,
+      rgba(0, 0, 0, 0.78) 100%);
+}
+
+/* Content is above both */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* Vertical centring so spacing looks intentional */
+.hero-content .row {
+  min-height: 260px;
+}
+
+@media (min-width: 992px) {
+  .hero-slab {
+    min-height: 600px;
+  }
+
+  .hero-content .row {
+    min-height: 600px;
+  }
+}
+
+/* Translucent text panel */
+.hero-panel-strong {
+  max-width: 860px;
+  padding: 18px 18px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@media (min-width: 992px) {
+  .hero-panel-strong {
+    padding: 22px 22px;
+  }
+}
+
+.hero-sublead {
+  line-height: 1.35;
+}
+
+.hero-footnote {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  opacity: 0.9;
+}
+
+/* Small icon badge used in headings */
+.icon-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #f8f9fa;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Ticks & crosses */
+.mark-tick,
+.mark-x {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 24px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.mark-tick {
+  background: rgba(25, 135, 84, 0.12);
+  color: #198754;
+}
+
+.mark-x {
+  background: rgba(220, 53, 69, 0.12);
+  color: #dc3545;
+}
+
+/* Safety callout (stand out more without shadows) */
+.safety-callout {
+  background: linear-gradient(90deg,
+      rgba(25, 135, 84, 0.10) 0%,
+      rgba(248, 249, 250, 1) 55%);
+  border-color: rgba(25, 135, 84, 0.25) !important;
+}
+
+.safety-badge {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: 1px solid rgba(25, 135, 84, 0.25);
+  background: rgba(25, 135, 84, 0.10);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #198754;
+}
+
+.safety-emphasis {
+  border-left: 4px solid rgba(25, 135, 84, 0.45);
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(25, 135, 84, 0.06);
+  font-weight: 800;
+}
+
+/* CTA improvements */
+.cta-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-inner {
+  max-width: 860px;
+}
+
+.cta-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px 250px at 50% 0%,
+      rgba(13, 110, 253, 0.12) 0%,
+      rgba(13, 110, 253, 0.00) 60%);
+  pointer-events: none;
+}
+
+/* Resource links (SEO blocks) */
+.resource-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #0d6efd;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(13, 110, 253, 0.25);
+  background: rgba(13, 110, 253, 0.06);
+}
+
+.resource-secondary {
+  text-decoration: none;
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .resource-primary:hover {
+    background: rgba(13, 110, 253, 0.10);
+  }
+
+  .resource-secondary:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+  }
+}
+
+.site-nav-link {
+  border-radius: 8px;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.site-nav-link:hover {
+  background-color: rgba(13, 110, 253, 0.08);
+  /* Bootstrap primary tint */
+  color: #0d6efd;
+}
+
+.site-nav-link.active {
+  background-color: rgba(13, 110, 253, 0.12);
+  color: #0d6efd;
+  font-weight: 600;
+}
+
+/* app/globals.css */
+/* Update the WhatsApp floating button to WhatsApp green.
+   Keep all your existing CSS, and REPLACE the .whatsapp-fab rules with these. */
+
+.whatsapp-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1050;
+  padding: 12px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  background: #25d366;
+  /* WhatsApp green */
+  color: #0b2e13;
+  /* dark text for contrast on green */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.whatsapp-fab:hover {
+  text-decoration: none;
+  filter: brightness(0.96);
+  color: #0b2e13;
+}
+
+.whatsapp-fab:focus-visible {
+  outline: 3px solid rgba(37, 211, 102, 0.35);
+  outline-offset: 3px;
+}
+
+.whatsapp-fab__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0b2e13;
+}
+
+.whatsapp-fab__text {
+  font-weight: 700;
+  line-height: 1;
+  color: #0b2e13;
+}
+
+@media (max-width: 360px) {
+  .whatsapp-fab__text {
+    display: none;
+  }
+}
