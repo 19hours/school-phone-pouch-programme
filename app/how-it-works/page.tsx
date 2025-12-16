@@ -22,7 +22,7 @@ export default function HowItWorksPage() {
       <div className="bg-light rounded p-4">
         <div className="row g-3 align-items-center">
           <div className="col-12 col-lg-8">
-            <div className="fw-semibold mb-1">The routine, in one line</div>
+            <div className="fw-semibold mb-1">How to manage phone usage in three steps</div>
             <div className="text-muted">
               Phone goes into pouch on entry → pouch stays locked in the phone-free space → unlock at an approved
               base when allowed.

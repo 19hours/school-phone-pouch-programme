@@ -55,7 +55,7 @@ export default function PhoneFreeSpacesInSchoolsPage() {
       <p className="mb-0">
         For implementation detail, use{" "}
         <Link href="/how-it-works" className="resource-secondary">
-          how the phone pouch routine works in three steps
+          how to manage phone usage in three steps
         </Link>{" "}
         and the{" "}
         <Link href="/implementation-guide" className="resource-secondary">

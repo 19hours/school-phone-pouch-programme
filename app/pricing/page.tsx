@@ -104,7 +104,7 @@ export default function PricingPage() {
           <p className="text-muted mb-0">
             Useful next reads:{" "}
             <Link href="/how-it-works" className="resource-secondary">
-              how the phone pouch routine works in three steps
+              how to manage phone usage in three steps
             </Link>
             ,{" "}
             <Link href="/implementation-guide" className="resource-secondary">

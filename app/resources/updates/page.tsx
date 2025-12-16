@@ -36,7 +36,7 @@ export default function UpdatesPage() {
         </Link>
         ,{" "}
         <Link href="/how-it-works" className="resource-secondary">
-          how the phone pouch routine works in three steps
+          how to manage phone usage in three steps
         </Link>
         , and{" "}
         <Link href="/implementation-guide" className="resource-secondary">

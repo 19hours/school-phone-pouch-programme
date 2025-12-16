@@ -177,7 +177,7 @@ export default function PhonePouchesVsPhoneLockersResourcePage() {
       <p className="mb-0">
         If you want the operational routine in plain steps, see{" "}
         <Link href="/how-it-works" className="resource-secondary">
-          how the phone pouch routine works in three steps
+          how to manage phone usage in three steps
         </Link>
         . For rollout planning across levels and spaces, use the{" "}
         <Link href="/implementation-guide" className="resource-secondary">

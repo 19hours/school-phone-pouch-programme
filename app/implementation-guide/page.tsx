@@ -66,7 +66,7 @@ export default function ImplementationGuidePage() {
             <div className="bg-white rounded p-3">
               <div className="small text-muted mb-1">Start here if you need context</div>
               <Link href="/how-it-works" className="resource-secondary">
-                How the routine works in three steps →
+                How to manage phone usage in three steps →
               </Link>
             </div>
           </div>
@@ -305,7 +305,7 @@ export default function ImplementationGuidePage() {
         <p className="text-muted mb-0">
           Helpful next reads:{" "}
           <Link href="/how-it-works" className="resource-secondary">
-            How the routine works in three steps
+            How to manage phone usage in three steps
           </Link>
           ,{" "}
           <Link href="/pricing" className="resource-secondary">

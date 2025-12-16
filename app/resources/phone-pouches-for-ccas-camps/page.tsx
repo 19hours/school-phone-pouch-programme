@@ -37,7 +37,7 @@ export default function PhonePouchesForCCAsCampsPage() {
         applies across spaces. For the SG School Phone Pouch Programme, the routine is
         described in{" "}
         <Link href="/how-it-works" className="resource-secondary">
-          how the phone pouch routine works in three steps
+          how to manage phone usage in three steps
         </Link>
         , and rollout steps are covered in the{" "}
         <Link href="/implementation-guide" className="resource-secondary">
