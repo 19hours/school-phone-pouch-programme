@@ -5,24 +5,24 @@ import { buildWhatsAppUrl } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title:
-    "SG School Phone Pouch Programme | Simple, visible phone compliance for schools. Made for Singapore Schools.",
+    "SG School Phone Pouch Programme | Simple, visible phone compliance for schools in Singapore",
   description:
-    "A simple, easy-to-audit phone management routine: students place phones into a personal locked pouch in phone-free spaces and unlock at approved times using an unlocking base.",
+    "A simple, visible way for schools to keep phones secured in phone-free spaces, with unlocking at approved times.",
   alternates: { canonical: "/" },
   openGraph: {
     title:
-      "SG School Phone Pouch Programme | Simple, visible phone compliance for schools",
+      "SG School Phone Pouch Programme | Simple, visible phone compliance for schools in Singapore",
     description:
-      "A simple, easy-to-audit phone management routine: students place phones into a personal locked pouch in phone-free spaces and unlock at approved times using an unlocking base.",
+      "A simple, visible way for schools to keep phones secured in phone-free spaces, with unlocking at approved times.",
     url: "/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "SG School Phone Pouch Programme | Simple, visible phone compliance for schools",
+      "SG School Phone Pouch Programme | Simple, visible phone compliance for schools in Singapore",
     description:
-      "A simple, easy-to-audit phone management routine: students place phones into a personal locked pouch in phone-free spaces and unlock at approved times using an unlocking base.",
+      "A simple, visible way for schools to keep phones secured in phone-free spaces, with unlocking at approved times.",
   },
 };
 
