@@ -3,7 +3,7 @@ export const siteConfig = {
   companyName: "Chu Technologies Pte Ltd",
   uen: "201926755K",
   // Replace with your production domain at deployment time.
-  siteUrl: "https://example.com",
+  siteUrl: "https://www.schoolphonepouch.sg",
 
   defaultTitle:
     "SG School Phone Pouch Programme | Simple, visible phone compliance for schools",
