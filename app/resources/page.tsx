@@ -52,6 +52,12 @@ const resources: ResourceLink[] = [
     description:
       "Dated Singapore context and references related to school phone/device-use guidance.",
   },
+  {
+    href: "/resources/phone-pouches-vs-yondr",
+    title: "Phone pouches vs Yondr",
+    description:
+      "A comparison guide for schools evaluating phone-locking pouch approaches: safety, procurement, customisation, and operations.",
+  },
 ];
 
 export default function ResourcesIndexPage() {

@@ -52,6 +52,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      path: "/resources/phone-pouches-vs-yondr",
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
     { path: "/resources/updates", changeFrequency: "weekly", priority: 0.5 },
   ];
 
