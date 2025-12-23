@@ -14,8 +14,7 @@ export default function PricingPage() {
     <div>
       <h1 className="display-6 fw-bold mb-3">Pricing</h1>
       <p className="text-muted mb-4">
-        Pricing starts at <strong>$16 per pouch</strong>, depending on order quantity. Contact us to confirm
-        your school’s quantities, rollout scope, and unlocking base needs.
+        Pricing depends on order quantity. Contact us to confirm your school’s quantities, rollout scope, and unlocking base needs.
       </p>
 
       <section className="mt-4">
@@ -26,9 +25,7 @@ export default function PricingPage() {
               <h2 className="h4 fw-bold mb-3">Pricing overview</h2>
 
               <div className="bg-light rounded p-4">
-                <div className="small text-muted">Starting from</div>
-                <div className="display-6 fw-bold mb-1">$16</div>
-                <div className="text-muted">Per pouch. Final unit price depends on quantity ordered.</div>
+                <div className="small text-muted">Final unit price depends on quantity ordered.</div>
               </div>
 
               <div className="mt-4">
