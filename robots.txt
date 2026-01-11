@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sg-school-phone-pouch-programme.com/sitemap.xml
