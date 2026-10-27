@@ -4,7 +4,6 @@ import { siteConfig } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = siteConfig.siteUrl.replace(/\/$/, "");
-  const lastModified = new Date();
 
   const routes: Array<{
     path: string;
@@ -18,7 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/implementation-guide", changeFrequency: "monthly", priority: 0.8 },
     { path: "/pricing", changeFrequency: "monthly", priority: 0.8 },
     { path: "/customisation", changeFrequency: "monthly", priority: 0.7 },
-    { path: "/samples-demo", changeFrequency: "monthly", priority: 0.7 },
     { path: "/contact", changeFrequency: "monthly", priority: 0.9 },
 
     // Utility/legal
@@ -62,7 +60,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes.map((r) => ({
     url: `${siteUrl}${r.path}`,
-    lastModified,
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));

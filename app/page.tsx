@@ -1,399 +1,196 @@
 // app/page.tsx
 import type { Metadata } from "next";
 import Link from "next/link";
-import { buildWhatsAppUrl } from "@/lib/whatsapp";
+import Image from "next/image";
+import { pageMetadata, siteConfig } from "@/lib/seo";
+import { CtaBand } from "@/components/CtaBand";
+import { CustomerLogos } from "@/components/Customers";
+import { QuoteButton } from "@/components/QuoteButton";
+import {
+  ArrowRightIcon,
+  BookIcon,
+  BuildingIcon,
+  CheckIcon,
+  ClipboardIcon,
+  HeartIcon,
+  PaletteIcon,
+  TagIcon,
+  UserIcon,
+} from "@/components/Icons";
 
-export const metadata: Metadata = {
-  title:
-    "SG School Phone Pouch Programme | Simple, visible phone compliance for schools in Singapore",
-  description:
-    "A simple, visible way for schools to keep phones secured in phone-free spaces, with unlocking at approved times.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    title:
-      "SG School Phone Pouch Programme | Simple, visible phone compliance for schools in Singapore",
-    description:
-      "A simple, visible way for schools to keep phones secured in phone-free spaces, with unlocking at approved times.",
-    url: "/",
-    type: "website",
+export const metadata: Metadata = pageMetadata({
+  title: siteConfig.defaultTitle,
+  description: siteConfig.defaultDescription,
+  path: "/",
+  absoluteTitle: true,
+});
+
+const stats = [
+  { value: "Free", label: "Unlocking base for every 100 pouches purchased" },
+  { value: "All", label: "Phone models supported" },
+  { value: "3", label: "Customisation options: colour, school logo and name holder" },
+  { value: "Since 2019", label: "Registered on Vendors@Gov" },
+];
+
+const steps = [
+  {
+    title: "Lock it",
+    text: "Students put their phone in their own pouch and clip it shut as they walk into class.",
   },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "SG School Phone Pouch Programme | Simple, visible phone compliance for schools in Singapore",
-    description:
-      "A simple, visible way for schools to keep phones secured in phone-free spaces, with unlocking at approved times.",
+  {
+    title: "Keep it",
+    text: "The pouch stays with the student. Teachers can see at a glance that it’s closed.",
   },
+  {
+    title: "Unlock it",
+    text: "When phones are allowed, students tap the pouch on an unlocking base to open it.",
+  },
+];
+
+const stakeholders = [
+  {
+    icon: <BuildingIcon />,
+    who: "School leaders",
+    text: "One clear routine for every class, and an easy way to see it’s working.",
+    href: "/programme",
+  },
+  {
+    icon: <BookIcon />,
+    who: "Teachers",
+    text: "No confiscating, storing or handing back phones. Just a quick look.",
+    href: "/how-it-works",
+  },
+  {
+    icon: <HeartIcon />,
+    who: "Parents",
+    text: "Their child keeps their phone all day, and staff can unlock it in an emergency.",
+    href: "/resources/parents-guide",
+  },
+  {
+    icon: <UserIcon />,
+    who: "Students",
+    text: "No keys to lose, and the same simple rule in every room.",
+    href: "/how-it-works",
+  },
+];
+
+const safety = [
+  "No needles or sharp pins, just a child-safe clip",
+  "Admin staff can unlock any pouch in an emergency",
+  "Works with every phone model",
+  "A free unlocking base for every 100 pouches",
+];
+
+const planning = [
+  {
+    icon: <TagIcon />,
+    title: "Pricing",
+    text: "Priced by quantity, with a free unlocking base for every 100 pouches.",
+    href: "/pricing",
+  },
+  {
+    icon: <ClipboardIcon />,
+    title: "Getting started",
+    text: "Five simple steps to get your school up and running.",
+    href: "/implementation-guide",
+  },
+  {
+    icon: <PaletteIcon />,
+    title: "Customisation",
+    text: "Colours for each level, your school logo and name holders.",
+    href: "/customisation",
+  },
+];
+
+const customerNames = siteConfig.customers
+  .map((c) => c.name)
+  .join(", ")
+  .replace(/, ([^,]*)$/, " and $1");
+
+const faqs = [
+  {
+    q: "Which schools use the pouches?",
+    a: `Schools and institutions that have purchased include ${customerNames}.`,
+  },
+  {
+    q: "What happens in an emergency?",
+    a: "Admin staff can unlock pouches during emergencies, so students can reach their phones when it matters.",
+  },
+  {
+    q: "Is it safe for younger students?",
+    a: "Yes. There are no needles or sharp pins. The pouch uses a child-safe clip that opens only on an unlocking base.",
+  },
+  {
+    q: "Do teachers have to collect phones?",
+    a: "No. Each student keeps their own pouch. Teachers just check that pouches are closed.",
+  },
+  {
+    q: "How much does it cost?",
+    a: "The price per pouch depends on how many you order, and you get one free unlocking base for every 100 pouches. WhatsApp us your student numbers for a quotation.",
+  },
+  {
+    q: "Can we start with one level first?",
+    a: "Yes. Start school-wide, one level at a time, or with a smaller pilot group.",
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 export default function HomePage() {
   return (
-    <div className="py-2">
-      {/* Hero with compact slideshow background */}
-      <section className="position-relative overflow-hidden rounded border hero-slab">
-        <div
-          id="heroCarousel"
-          className="carousel slide hero-carousel"
-          data-bs-ride="carousel"
-          data-bs-interval="4500"
-          aria-label="Programme images"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div
-                className="hero-slide"
-                style={{ backgroundImage: "url(/images/hero-1.jpg)" }}
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
 
-        {/* Strong overlay for contrast */}
-        <div className="hero-overlay-strong" aria-hidden="true" />
-
-        <div className="container position-relative hero-content">
-          <div className="row g-4 align-items-center">
-            <div className="col-12 col-lg-9">
-              {/* More opaque translucent panel for guaranteed readability */}
-              <div className="hero-panel-strong">
-                <h1 className="display-5 fw-bold text-white mb-2">
-                  Simple, visible phone compliance for schools.
-                </h1>
-
-                <p className="lead text-white mb-3 hero-sublead">
-                  Made for Singapore Schools.
-                </p>
-
-                <div className="d-flex flex-column flex-sm-row gap-2">
-                  <Link
-                    href="/contact"
-                    className="btn btn-primary btn-lg px-4 d-inline-flex align-items-center justify-content-center"
-                    style={{ minHeight: 48, minWidth: 220 }}
-                  >
-                    Book a demo
-                  </Link>
-
-                  <a
-                    href={buildWhatsAppUrl()}
-                    className="btn btn-outline-light btn-lg px-4 d-inline-flex align-items-center justify-content-center"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ minHeight: 48, minWidth: 220 }}
-                  >
-                    Chat with us on WhatsApp
-                  </a>
-                </div>
-
-                <div className="text-white mt-3 hero-footnote">
-                  A quick and easy way to manage phones in phone-free spaces.
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Schools first */}
+      <section className="logos" aria-labelledby="trusted-heading">
+        <div className="container">
+          <h2 id="trusted-heading" className="logos__label">
+            Trusted by schools across Singapore
+          </h2>
+          <CustomerLogos />
         </div>
       </section>
 
-      {/* Problem vs Solution (side-by-side) */}
-      <section className="py-5">
-        <div className="d-flex align-items-start gap-3 mb-3">
-          <div className="icon-badge" aria-hidden="true">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M12 2 4 7v10l8 5 8-5V7l-8-5Z"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M12 22V12"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-              <path
-                d="M20 7 12 12 4 7"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <div>
-            <h2 className="h3 fw-bold mb-1">At a glance: problem vs programme routine</h2>
-            <div className="text-muted">
-              See the main challenges and the programme routine in one view.
-            </div>
-          </div>
+      {/* Banner with floating box */}
+      <section className="hero-banner">
+        <div className="hero-banner__image">
+          <Image
+            src="/images/hero-1.jpg"
+            alt="Lockable phone pouches in a school classroom"
+            fill
+            priority
+            sizes="100vw"
+          />
         </div>
-
-        <div className="row g-3">
-          {/* Problem */}
-          <div className="col-12 col-lg-6">
-            <div className="border rounded p-4 h-100 bg-white">
-              <h3 className="h5 fw-bold mb-3">
-                Problem: Difficulty in managing phones in classroom environments
-              </h3>
-
-              <ul className="list-unstyled m-0 d-grid gap-3">
-                <li className="d-flex gap-2">
-                  <span className="mark-x" aria-hidden="true">
-                    ✕
-                  </span>
-                  <span>Students are often distracted by smartphones.</span>
-                </li>
-                <li className="d-flex gap-2">
-                  <span className="mark-x" aria-hidden="true">
-                    ✕
-                  </span>
-                  <span>Schools and exam centres need simple, visible compliance.</span>
-                </li>
-                <li className="d-flex gap-2">
-                  <span className="mark-x" aria-hidden="true">
-                    ✕
-                  </span>
-                  <span>Bags and pockets still allow discreet phone use.</span>
-                </li>
-                <li className="d-flex gap-2">
-                  <span className="mark-x" aria-hidden="true">
-                    ✕
-                  </span>
-                  <span>Administrators need a consistent, easy-to-audit solution.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Solution */}
-          <div className="col-12 col-lg-6">
-            <div className="border rounded p-4 h-100 bg-light">
-              <h3 className="h5 fw-bold mb-3">Solution: School Phone Pouch Programme</h3>
-
-              <ul className="list-unstyled m-0 d-grid gap-3">
-                <li className="d-flex gap-2">
-                  <span className="mark-tick" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span>
-                    Each student places their phone into a personal phone pouch as they
-                    enter a phone-free space.
-                  </span>
-                </li>
-
-                <li className="d-flex gap-2">
-                  <span className="mark-tick" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span>
-                    The pouch uses a safe clip mechanism, and can be unlocked using a
-                    magnetic base when students are allowed to use their phones again.
-                  </span>
-                </li>
-
-                <li className="d-flex gap-2">
-                  <span className="mark-tick" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span>
-                    Pouch stays with the student entire day, easy to show the phone is
-                    secured.
-                  </span>
-                </li>
-
-                <li className="d-flex gap-2">
-                  <span className="mark-tick" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span>Can be unlocked by admin staff during emergencies.</span>
-                </li>
-
-                <li className="d-flex gap-2">
-                  <span className="mark-tick" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span>
-                    Enables fast, visual compliance checks for teachers and administrators.
-                  </span>
-                </li>
-              </ul>
-
-              <div className="mt-4 d-grid gap-2">
-                <div className="border rounded p-3 bg-white">
-                  <span className="mark-tick me-2" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span className="fw-semibold">
-                    Lock that can only be unlocked using an unlocking base.
-                  </span>
-                </div>
-                <div className="border rounded p-3 bg-white">
-                  <span className="mark-tick me-2" aria-hidden="true">
-                    ✓
-                  </span>
-                  <span className="fw-semibold">Compatible with all phone models.</span>
-                </div>
-              </div>
-
-              <div className="mt-3">
-                <Link href="/programme" className="fw-semibold text-decoration-none">
-                  Learn more about the programme →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Safety (stand out more; text remains verbatim) */}
-      <section className="pb-5">
-        <div className="safety-callout border rounded p-4 p-lg-5">
-          <div className="d-flex align-items-start gap-3">
-            <div className="safety-badge" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M12 2 4.5 5.5V12c0 5 3.5 9 7.5 10 4-1 7.5-5 7.5-10V5.5L12 2Z"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M9 12l2 2 4-5"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
-
-            <div className="flex-grow-1">
-              <h2 className="h3 fw-bold mb-2">Student safety is our priority</h2>
-
-              <div className="d-grid gap-2">
-                <div className="d-flex gap-2 align-items-start">
-                  <span className="mark-tick" aria-hidden="true">
-                    ✓
-                  </span>
-                  <div>Our lockable phone pouches do not use needles.</div>
-                </div>
-
-                <div className="d-flex gap-2 align-items-start">
-                  <span className="mark-tick" aria-hidden="true">
-                    ✓
-                  </span>
-                  <div>We use child-safe clips with locking technology.</div>
-                </div>
-
-                <div className="safety-emphasis mt-2">Student safety is our PRIORITY.</div>
-              </div>
-
-              <div className="mt-3">
-                <Link href="/how-it-works" className="fw-semibold text-decoration-none">
-                  Learn how it works →
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SEO links (two columns; minimal copy; two primary links) */}
-      <section className="pb-5">
-        <h2 className="h3 fw-bold mb-3">Resources</h2>
-
-        <div className="row g-3">
-          {/* Column 1: Primary audiences + small links */}
-          <div className="col-12 col-lg-6">
-            <div className="border rounded p-4 h-100 bg-white">
-              <div className="d-grid gap-2">
-                <Link href="/programme" className="resource-primary">
-                  For principals: programme overview →
-                </Link>
-                <Link href="/implementation-guide" className="resource-primary">
-                  For administrators: implementation guide →
-                </Link>
-              </div>
-
-              <hr className="my-4" />
-
-              <ul className="list-unstyled m-0 d-grid gap-2">
+        <div className="hero-banner__overlay">
+          <div className="container">
+            <div className="hero-banner__box">
+              <h1>Lockable phone pouches for phone-free lessons</h1>
+              <p>
+                Each student locks their phone in their own pouch at the start of class and keeps
+                it with them. It opens again only when the school allows.
+              </p>
+              <QuoteButton />
+              <ul className="hero-checks">
                 <li>
-                  <Link href="/how-it-works" className="resource-secondary">
-                    For teachers: classroom routine in 3 steps
-                  </Link>
+                  <CheckIcon size={18} /> No needles
                 </li>
                 <li>
-                  <Link href="/pricing" className="resource-secondary">
-                    Pricing and unlocking bases
-                  </Link>
+                  <CheckIcon size={18} /> Works with every phone
                 </li>
                 <li>
-                  <Link href="/resources/parents-guide" className="resource-secondary">
-                    For parents: what students do each day
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/customisation" className="resource-secondary">
-                    Customisation options
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Column 2: Singapore context + updates */}
-          <div className="col-12 col-lg-6">
-            <div className="border rounded p-4 h-100 bg-white">
-              <ul className="list-unstyled m-0 d-grid gap-2">
-                <li>
-                  <Link
-                    href="/resources/singapore-school-phone-policy"
-                    className="resource-secondary"
-                  >
-                    Singapore schools: phone policies and phone-free spaces
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/resources/phone-free-spaces-in-schools"
-                    className="resource-secondary"
-                  >
-                    Phone-free spaces in schools: classrooms, halls and assemblies
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/resources/phone-pouches-for-ccas-camps"
-                    className="resource-secondary"
-                  >
-                    CCAs and camps: managing phones with pouches
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/resources/exams-phone-compliance"
-                    className="resource-secondary"
-                  >
-                    Exams: visible phone compliance routine
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/resources/phone-pouches-vs-phone-lockers"
-                    className="resource-secondary"
-                  >
-                    Phone pouches vs phone lockers in schools
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/resources/updates" className="resource-secondary">
-                    Updates
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/resources" className="resource-secondary">
-                    View all resources
-                  </Link>
+                  <CheckIcon size={18} /> No confiscating
                 </li>
               </ul>
             </div>
@@ -401,72 +198,173 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Comparison teaser */}
-      <section className="pb-5">
-        <h2 className="h3 fw-bold">Considering phone lockers instead?</h2>
-        <p className="text-muted mt-2">
-          See why our phone pouches are easier to manage in schools.
-        </p>
-
-        <div className="row g-3 mt-1">
-          <div className="col-12 col-lg-6">
-            <Link
-              href="/programme#programme-vs-phone-lockers"
-              className="text-decoration-none"
-            >
-              <div className="border rounded p-4 h-100 bg-white">
-                <div className="fw-semibold">Programme vs Phone Lockers</div>
-                <div className="text-muted mt-2">
-                  Control of distraction, flexibility across spaces, operations, and more.
-                </div>
-                <div className="mt-3 text-primary fw-semibold">View comparison →</div>
+      {/* Key figures */}
+      <section className="stats" aria-labelledby="stats-heading">
+        <div className="container">
+          <h2 id="stats-heading">At a glance</h2>
+          <div className="row g-4">
+            {stats.map((s) => (
+              <div key={s.label} className="col-6 col-lg-3">
+                <div className="stat__value">{s.value}</div>
+                <div className="stat__label">{s.label}</div>
               </div>
-            </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="section-title">How it works</h2>
+            <p className="section-lead">
+              The same three steps in classrooms, the hall, exams and CCAs.
+            </p>
           </div>
 
-          <div className="col-12 col-lg-6">
-            <Link href="/programme" className="text-decoration-none">
-              <div className="border rounded p-4 h-100 bg-white">
-                <div className="fw-semibold">Programme overview</div>
-                <div className="text-muted mt-2">
-                  The full rationale, how it works, and what schools can expect.
-                </div>
-                <div className="mt-3 text-primary fw-semibold">View overview →</div>
-              </div>
+          <ol className="row g-5 list-unstyled m-0">
+            {steps.map((s, i) => (
+              <li key={s.title} className="col-12 col-md-4 step">
+                <span className="step-num" aria-hidden="true">
+                  {i + 1}
+                </span>
+                <h3>{s.title}</h3>
+                <p>{s.text}</p>
+              </li>
+            ))}
+          </ol>
+
+          <div className="mt-5">
+            <Link href="/how-it-works" className="link-arrow">
+              Read more about how it works <ArrowRightIcon size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="pb-5">
-        <div className="cta-wrap border rounded p-4 p-lg-5 bg-light text-center">
-          <div className="cta-inner mx-auto">
-            <h2 className="display-6 fw-bold mb-2">
-              For interested schools: Please contact us immediately to roll out in 2026!
-            </h2>
+      {/* For each stakeholder */}
+      <section className="section section-muted">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="section-title">For your whole school community</h2>
+            <p className="section-lead">What the programme means for each group.</p>
+          </div>
+          <div className="row g-4">
+            {stakeholders.map((s) => (
+              <div key={s.who} className="col-12 col-sm-6 col-lg-3">
+                <Link href={s.href} className="tile link-tile d-flex flex-column">
+                  <span className="icon-tile">{s.icon}</span>
+                  <h3 className="mt-4">{s.who}</h3>
+                  <p className="mb-4">{s.text}</p>
+                  <span className="link-arrow mt-auto">
+                    Learn more <ArrowRightIcon size={16} />
+                  </span>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="d-flex flex-column flex-sm-row gap-2 justify-content-center mt-3">
-              <Link
-                href="/contact"
-                className="btn btn-primary btn-lg px-4 d-inline-flex align-items-center justify-content-center"
-                style={{ minHeight: 52, minWidth: 240 }}
-              >
-                Book a demo
+      {/* Safety */}
+      <section className="section">
+        <div className="container">
+          <div className="row g-5 align-items-center">
+            <div className="col-12 col-lg-5">
+              <div className="media-frame" style={{ maxWidth: 440 }}>
+                <Image
+                  src="/images/pouch.png"
+                  alt="Lockable phone pouch with a phone inside"
+                  width={1024}
+                  height={1024}
+                  sizes="(min-width: 992px) 440px, 100vw"
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
+              </div>
+            </div>
+            <div className="col-12 col-lg-7">
+              <h2 className="section-title">Designed with students’ safety first</h2>
+              <p className="section-lead mb-4">
+                Easy for students to use, and easy for staff to manage.
+              </p>
+              <ul className="checklist mb-4" style={{ fontSize: "1.1rem" }}>
+                {safety.map((s) => (
+                  <li key={s}>
+                    <CheckIcon size={20} />
+                    <span>{s}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/programme" className="btn btn-outline-primary">
+                About the programme
               </Link>
-              <a
-                href={buildWhatsAppUrl()}
-                className="btn btn-outline-primary btn-lg px-4 d-inline-flex align-items-center justify-content-center"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ minHeight: 52, minWidth: 240 }}
-              >
-                Chat with us on WhatsApp
-              </a>
             </div>
+          </div>
+
+          <div className="policy-note mt-5">
+            <p>
+              From January 2026, MOE restrictions on smartphone use for secondary students extend
+              to recess and CCAs.
+            </p>
+            <Link href="/resources/singapore-school-phone-policy" className="link-arrow flex-shrink-0">
+              What it means for schools <ArrowRightIcon size={16} />
+            </Link>
           </div>
         </div>
       </section>
-    </div>
+
+      {/* Planning links */}
+      <section className="section section-muted">
+        <div className="container">
+          <div className="section-head">
+            <h2 className="section-title">Planning for your school</h2>
+            <p className="section-lead">Everything you need to decide and get started.</p>
+          </div>
+          <div className="row g-4">
+            {planning.map((c) => (
+              <div key={c.title} className="col-12 col-md-4">
+                <Link href={c.href} className="tile link-tile d-flex flex-column">
+                  <span className="icon-tile">{c.icon}</span>
+                  <h3 className="mt-4">{c.title}</h3>
+                  <p className="mb-4">{c.text}</p>
+                  <span className="link-arrow mt-auto">
+                    Read more <ArrowRightIcon size={16} />
+                  </span>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="section">
+        <div className="container" style={{ maxWidth: 860 }}>
+          <div className="section-head">
+            <h2 className="section-title">Frequently asked questions</h2>
+          </div>
+          <div className="faq">
+            {faqs.map((f) => (
+              <details key={f.q}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+          <div className="mt-4">
+            <Link href="/resources" className="link-arrow">
+              More guides for school leaders <ArrowRightIcon size={16} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-5 mb-lg-5">
+        <div className="container">
+          <CtaBand className="" />
+        </div>
+      </section>
+    </>
   );
 }
